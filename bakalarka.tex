@@ -1,69 +1,51 @@
-\documentclass[10pt,oneside,english,a4paper]{article}
+\documentclass[10pt,oneside,english,a4paper]{article} 
 \usepackage{graphicx}
 \usepackage{url} 
-\usepackage{hyperref} 
+\usepackage{doi} 
+\usepackage{hyperref}
 \usepackage{cite}
+\usepackage{comment} 
+\usepackage[utf8]{inputenc}
 
+%\usepackage[backend=biber,style=numeric]{biblatex}
+%\usepackage[sorting=none]{biblatex} %\addbibresource{literature.bib}
+%\DeclareFieldFormat{doi}{doi:\texttt{#1}} %\renewcommand*{\doi}[1]{doi:\texttt{#1}}
+%\bibliography{literature}
 
-\title{\Large \textbf{
-Slovenská technická univerzita v Bratislave
-Fakulta informatiky a informačných technológií\\
-\ \\
-Slovak University of Technology in Bratislava
-Faculty of Informatics and Information Technologies}
-\ \\
-\vspace{4\baselineskip}
-\Large{ Ákos Lévárdy }
-\ \\
-\LARGE{ Odporúčacie systémy založené na AI }
-\ \\
-\ \\
-\large{ Bakalárska práca }
-}
+\title{\Large \textbf{ Slovenská technická univerzita v Bratislave Fakulta informatiky
+a informačných technológií\\ \ \\Slovak University of Technology in Bratislava Faculty
+of Informatics and Information Technologies} \ \\ \vspace{4\baselineskip} \Large{ Ákos
+Lévárdy } \ \\ \LARGE{ Odporúčacie systémy založené na AI } \ \\ \ \\ \large{
+Bakalárska práca } }
 
+\author{Ákos Lévárdy}
 
-%\author{Ákos Lévárdy}
+\begin{document} \maketitle
 
-\begin{document}
-\maketitle
-
-
-\vspace{7\baselineskip} % vertical space
+\vspace{7\baselineskip} % vertical space 
 \hspace{-2cm} % horizontal position
-\parbox{0.8\textwidth}{
-%\raggedright % Left-align the text
-\Large
-Študijný program: Informatika\\
-Študijný odbor: 9.2.1 Informatika\\
-Miesto vypracovania: FIIT STU, Bratislava\\
-Vedúci práce: PaedDr. Pavol Baťalík \\\\
-%\today
-}
-
+\parbox{0.8\textwidth}{ 
+\raggedright % Left-align the text
+\Large Študijný program:
+Informatika\\ Študijný odbor: 9.2.1 Informatika\\ Miesto vypracovania: FIIT STU,
+Bratislava\\ Vedúci práce: PaedDr. Pavol Baťalík \\}
+ %\today  
 \newpage{}
-\hspace{-2cm}  
-\Large \textbf{ANOTÁCIA}\\
-500 slov
+\hspace{-2cm} \Large \textbf{ANOTÁCIA}\\ 500 slov 
 
-\newpage{}
-\hspace{-2cm} 
-\Large \textbf{ANNOTATION}
+\newpage{} 
+\hspace{-2cm} \Large \textbf{ANNOTATION}
 
+\newpage{} 
+\hspace{-2cm} \Large \textbf{Čestné vyhlásenie}
 
-\newpage{}
-\hspace{-2cm} 
-\Large \textbf{Čestné vyhlásenie}
+\newpage{} 
+\hspace{-2cm} \Large \textbf{Poďakovanie} 
 
-
-\newpage{}
-\hspace{-2cm} 
-\Large \textbf{Poďakovanie}
-
-\newpage{}
+\newpage{} 
 \tableofcontents
 
-
-\newpage{}
+\newpage{} 
 \section{Introduction}
 
 
@@ -74,23 +56,16 @@ Vedúci práce: PaedDr. Pavol Baťalík \\\\
 
 
 
+%\clearpage %\cite{Al-Hassan2024a} %\cite{Wang2024} %%\nocite{DeBiasio2024}
+%\nocite{5197422} %\nocite{NILASHI2018507} %\printbibliography{}
 
 
 
 
-
-
-
-
-
-
-
-\clearpage
-\normalsize
-\bibliographystyle{plainurl}
-\bibliography{literature}
-
+\clearpage 
+\normalsize 
+\bibliographystyle{unsrt} 
+\bibliography{literature} 
 \nocite{*}
-
 
 \end{document}
