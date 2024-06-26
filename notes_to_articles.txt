@@ -280,20 +280,124 @@ Fusion-Based Semantic Similarity Measure
 		attribute-based similarity, 
 		inferred attribute-based similarity
 
--------------------------------------------------------
-A Sequential Recommendation Model for Balancing 
-Long- and Short-Term Benefits
--------------------------------------------------------
-
-
-
-
-
-
-
 
 -------------------------------------------------------
 A recommender system based on collaborative filtering using ontology
 and dimensionality reduction techniques
 -------------------------------------------------------
+	- actively recommend relevant information to users
+	without the need for an explicit search query
+	(item-based)	(user-based)
+
+	memory-based 	model-based(hierarchical)
+	correlation analysis
+	vector similarity
+
+	model-based CF algorithms have been an alternative approach 
+	to k-NN to solve the scalability problem of memory-based method
+
+	- Model-based algorithms do not suffer from memory-based drawbacks 
+	- can create prediction over a shorter period of time compared to memory-based algorithms 
+	because model-based algorithms perform off-line computation for training
+
+	- performance improvement: 
+		ontology 
+		dimensionality reduction
+
+	improve the accuracy 
+		- by alleviating the sparsity issue in item-based CF using ontology.
+	improve the scalability 
+		- dimensionality reduction techniques
+
+	Ontology
+		- Modeling the information at the semantic level
+		- ontology is originally defined as:
+			- explicit specification of a conceptualization
+			- formal specification of a shared conceptualization
+			- a knowledge domain conceptualization into a computer processable format 
+			which models entities, attributes, and axioms
+		- vocabulary and relationships between the concepts
+		- concept properties, disjointness statements, value restrictions, 
+		and specification of logical relationships between the objects.
+	
+		- fuzzy ontology 
+	
+	Clustering
+		- Clustering method groups similar items or users into separate clusters 
+		to identify neighborhood Clustering techniques have been used either 
+		directly or as a preprocessing stage in recommender systems  
+		- can solve overgeneralization problem
+			
+		- model based method - better accuracy 
+		in relation to the memory-based approaches	
+		- k-means clustering - solve missing-value problems
+		- clustering improves the scalability issue in CF
+		
+	Dimensionality reduction
+		- 
+		
+	CF
+		- make meaningful associations between people and their product preferences
+		- All CF methods require the past ratings of users 
+		in order to predict and accordingly recommend items to the target user
+
+	----
+	developed a recommendation method of user-based CF based on predictive value padding. 
+	Their method predicts the empty values in user-item matrix by the integration of 
+	content-based recommendation algorithm and user activity level before calculating user similarity.
+
+	developed a multi-model ontology-based framework for
+	semantic search of educational content in e-learning context. 
+	They combined the content-based with the rule-based approaches 
+	to provide the user the hybrid recommendations. 
+	They evaluated the method using Top-N precision and Top-N recall metrics.
+
+	implemented a library recommender system to provide service for the users 
+	of National Chung Hsing University (NCHU) in Taiwan. 
+	They used ontology for improving the prediction accuracy of the recommender system.
+	The Classification for Chinese Libraries (CCL) was adopted as reference ontology. 
+	developed a recommendation system by incorporating CF techniques with 
+	the Personal Ontology Model of PORE to recommend English collections. 
+	They used Dewey Decimal Classification (DDC) as the reference ontology 
+	to build a personal ontology for each patron
+
+
+- Mean Absolute Error (MAE) and coverage metrics to evaluate the method
+
+- genetic algorithm for recommendation process. 
+They used MovieLens dataset for the method evaluation using recall, diversity and precision metrics
+
+- semantic web techniques to model the information of the recommender system
+
+- combining web mining methods and domain specific ontologies
+
+- ontology and Sequential Pattern Mining (SPM) for recommendation of e-learning resources to learners
+SPM to discover the learners’ sequential learning patterns and ontology to model and 
+represent the domain knowledge about the learner and learning resources.
+
+
+
+
+-------------------------------------------------------
+A Sequential Recommendation Model for Balancing 
+Long- and Short-Term Benefits
+-------------------------------------------------------
+
+	consideration of both long-term and short-term interests:
+	- Long-term interests represent users’ preferences and 
+	interests over a longer time span, 
+	reflecting their stable preferences and long-term behavioural patterns. 
+	- Short-term interests represent users’ immediate preferences and 
+	interests over a shorter time span; 
+	these interests are typically influenced by the current context 
+	and environment and are temporary and variable. 
+
+Recommendation systems typically need to consider both 
+the long-term and short-term interests of users to
+provide more accurate and personalized recommendations.
+
+there is a need to capture the dynamic nature of user
+interests and how they evolve over time.
+
+
 
