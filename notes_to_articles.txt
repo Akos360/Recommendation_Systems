@@ -400,4 +400,23 @@ there is a need to capture the dynamic nature of user
 interests and how they evolve over time.
 
 
+-------------------------------------------------------
+Entropy-based concept drift detection in information systems
+-------------------------------------------------------
 
+
+In the era of big data, with the generation of massive data, in-
+formation systems inevitably experience frequent data changes. This
+change in the statistical properties of the target variable, caused by
+unforeseeable variations in the underlying distribution of the data
+stream, is known as concept drift. The emergence of concept
+drift can significantly impact the reliability of prediction and decision
+outcomes
+
+
+With the proliferation of massive data in information systems, it
+is common for data to undergo changes over time. These changes
+introduce uncertainties in the target concept within a dataset, which
+consequently affecting the uncertainty of the original decision rules.
+As a result, the fluctuations in the uncertainty of the target concept
+can be considered as the fundamental cause of concept drift.
