@@ -27,11 +27,11 @@ Bachelor thesis} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
 \maketitle
-
+\thispagestyle{empty}
 \vspace{7\baselineskip} 		% vertical space 
-\hspace{-2cm} 				% horizontal position
+\hspace{-2cm} 			% horizontal position
 \parbox{0.8\textwidth}{ 
-\raggedright 					% Left-align the text
+\raggedright 			% Left-align the text
 
 \Large Degree course: Informatics\\ 
 Field of study: 9.2.1 Informatics\\ 
@@ -46,17 +46,22 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  %\today  
-
+\pagenumbering{roman}
 \newpage{} 
+\setcounter{page}{2}
+
 \hspace{-2cm} \Large \textbf{ANNOTATION}\\
 500 words
 
 \newpage{}
+\setcounter{page}{3}
+
 \hspace{-2cm} \Large \textbf{ANOTÁCIA}\\ 
 500 slov 
 
 
 \newpage{} 		% Čestné vyhlásenie
+\setcounter{page}{4}
 \vspace*{\fill}
 \noindent \Large \textbf{DECLARATION OF OATH}\\
 \noindent I hereby declare upon my honour that I wrote this thesis single-handed with usage of quoted literature and based on my knowledge and professional supervision of my supervisor.
@@ -65,7 +70,8 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 
 
 
-\newpage 		% Poďakovanie
+\newpage 			% Poďakovanie
+\setcounter{page}{5}
 \vspace*{\fill} 
 \noindent \Large \textbf{ ACKNOWLEDGMENT}\\
 \noindent First and foremost, I would like to thank my supervisor for their invaluable guidance and support throughout the duration of this project.
@@ -76,12 +82,28 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage{} 
-\tableofcontents
 
 \newpage{} 
+
+\setcounter{page}{6}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{}
+\listoffigures
+\listoftables
+\section*{List of Abbreviations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\clearpage{} 
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
 \section{Introduction}
-As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government, and e-learning. To help users navigate this vast sea of content, Recommender Systems have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
+As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government, and e-learning. To help users navigate this vast sea of content, Recommender Systems have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.
+
+\clearpage{}
+\section{Analysis}
 Recommendation types are divided to 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
 Both CB and CF approaches encounter a significant challenge known as the ‘cold-start problem’. This problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in
 such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
@@ -94,41 +116,58 @@ Content-Based Filtering\\
 Collaborative Filtering\\
 - analyzes relationships between users  and interdependencies among products to identify new user-item associations\\
 - recommend items or content to users by analyzing their interactions and similarities with other users\\\\
-\cite{5197422}
-
-
-\clearpage
-\section{Content-Based Filtering}
-
-\section{Collaborative Filtering}
-
-\section{Hybrid approach}
+\cite{5197422}\\
+- user confidence\\
+- time context\\
 
 \clearpage
-\section{Semantics}
+\subsection{Content-Based Filtering}
 
-\section{Ontology}
+\subsection{Collaborative Filtering}
 
-\section{Matrix Factorization}
+\subsection{Hybrid approach}
+
+\clearpage
+\subsection{Semantics}
+
+\subsection{Ontology}
+
+\subsection{Matrix Factorization}
 Matrix factorization (MF) is a technique utilized in collaborative filtering to decompose
 a matrix of user-item ratings into lower-rank matrices capturing the latent factors under-
 lying the data\cite{Tokala2023}.\\
 People prefer to rate just a small percentage of items, therefore the user-item rating matrix, that tracks the ratings people assign to various items, is frequently sparse.\\
 In order to deal with this sparsity, matrix factorization (MF) algorithms split the matrix into two lower-rank matrices: one that shows the latent properties of the items and another that reflects the underlying user preferences. These latent representations can be used to predict future ratings or complete the matrix's missing ratings after factorization.
 
-\section{Search Engines}
+\subsection{Search Engines}
 Search Engines have become crucial for navigating the vast amount of information available online. They make it possible for people to quickly look up solutions, learn new things, and browse the wide variety of resources available on the internet. Search engine optimization is now necessary to guarantee that search engines deliver relevant results, quick search times, and a top-notch user experience given the explosive growth of online information.\\
 A search engine is essentially a software that finds the information the user needs using keywords or phrases. It delivers results rapidly, even with millions of websites available online.
 The importance of speed in online searches is highlighted by how even minor delays in retrieval can negatively affect users' perception of result quality.
 \cite{pub.1171882357}
 
 \clearpage
-\section{Concept Drift}
+\subsection{Concept Drift}
 Concept Drift - Entropy-based\\\\
 Information systems inevitably experience frequent data changes. 
 This change in the statistical properties of the target variable, caused by
 unforeseeable variations in the underlying distribution of the data
 stream, is known as concept drift.\cite{Sun2024}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\section{Specification of requirements}
+
+\clearpage{}
+\section{Implementation}
+
+\clearpage{}
+\section{Conclusion}
 
 
 \clearpage
