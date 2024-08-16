@@ -106,11 +106,11 @@ The main target of this project is to create a recommendation system that uses .
 \clearpage{}
 \section{Analysis}
 Making decisions is not always easy. People are frequently presented with an overwhelming number of options when picking a product, a movie, or a destination to travel to, and each option comes with different levels of information and trustworthiness.\\ 
-Because of this amount of detail, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user to choose from. \\\\
-Recommendation systems have different types for their recommendation, how they work. These recommendation types are divided into 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
-Content-Based Filtering work in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
+Because of this amount of detail, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user to choose from. The Recommendation systems provide users with well chosen options for products that fit their requirements and interests, sometimes even matching their tastes.\\\\
+Different types of recommendation systems exist, and their methods of operation vary. These recommendation types are divided into 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
+Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
 Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.\\\\
-Both CB and CF approaches encounter a significant challenge known as the ‘cold-start problem’. This problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
+Both CB and CF approaches encounter a significant challenges such as the Cold-Start Problem, Data Sparsity or Scalability. The Cold-Start Problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
 %
 %
 %
@@ -130,7 +130,36 @@ Collaborative Filtering\\
 - time context\\\\
 - personalized -vs- not personalized(recommend based on huge amount of people) recommendations\\
 - recommend specific subject, study material, field of study, examples, lessons\\
-- "At first it is important to describe / to outline / to define ..."
+- "At first it is important to describe / to outline / to define ..."\\
+%
+%
+%
+%
+%
+- Material difficulty level - features\\
+- Comments, reviews, ratings, number of views, content, inquiries, and other factors can be used to automatically assign a difficulty level.\\\\
+- four primary stages: student profiling, material collection, material filtering, and material validation. \\
+- Machine Learning (ML), Decision Making (DM) approaches\\
+- Each stage is explained in detail in the sub-sections below.\\
+- The DM techniques were used to extract keywords from the material provided to develop queries\\\\
+- MATERIALS: textbooks, lecture notes, additional questions, quizzes, exam samples, reports, articles, and books\\\\
+%
+I. The content-based module: The module is responsible for analyzing the con-
+tents of the materials and representing each material with a set of keywords and
+assigning them to topics and courses.
+II. The collaborative module: The module used the ratings, reviews, and number of
+views of the materials in the student’s history.
+III. The contextual module: The module used the students’ marks and level of
+performance.
+IV. The serendipity module: The module used the publicity of the materials and their
+reviews in the material database.
+\cite{Zayet20237487}
+
+
+
+
+
+
 
 \clearpage
 \subsection{Content-Based Filtering}
@@ -138,6 +167,17 @@ Collaborative Filtering\\
 \subsection{Collaborative Filtering}
 
 \subsection{Hybrid approach}
+
+
+\clearpage
+\subsection{Difficulties related to recommendation systems}
+
+
+
+
+
+
+
 
 \clearpage
 \subsection{Semantics}
