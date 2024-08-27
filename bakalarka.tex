@@ -116,7 +116,7 @@ Because of this amount of detail from all of the items, recommendation systems a
 Different types of recommendation systems exist, and their methods of operation vary. These recommendation types are divided into 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
 Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
 Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.\\\\
-Both CB and CF approaches encounter a significant challenges such as the Cold-Start Problem, Data Sparsity or Scalability. The Cold-Start Problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
+Both CB and CF approaches encounter significant challenges such as the Cold-Start Problem, Data Sparsity or Scalability. The Cold-Start Problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
 %
 
 
@@ -125,7 +125,7 @@ Both CB and CF approaches encounter a significant challenges such as the Cold-St
 \clearpage
 \subsection{Collaborative Filtering}
 One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\\\
-Collaborative filtering can be divided into 2 methods which are "Memory-based" and "Model-Based" collaborative filtering. The first one relies on historical preferences, whereas the second method is based on machine learning models to predict the preferences.\\\\
+Collaborative filtering can be divided into 2 methods which are "Memory-based" and "Model-Based" collaborative filtering. The first one relies on historical preferences, whereas the second method is based on machine learning models to predict the best options.\\\\
 There are 2 basic types of memory-based collaborative filtering which are:
 \begin{itemize}
 \item User-Based Collaborative Filtering
@@ -152,7 +152,21 @@ There are 2 basic types of memory-based collaborative filtering which are:
 
 
 \subsection{Content-Based Filtering}
-- creates a profile for every user or item and characterizes them.\\\\
+Recommender Systems which are using content-based filtering, review a variety of items, documents and their details. Each product has their own description which is collected to make a profile for each item. These profiles for items are different representations of information and users interest about the specific item. \\
+The recommendation process basically consists in matching
+up the attributes of the user profile against the attributes of a content object.
+\cite{pub.1034486657}\\
+The process for recommending items using content-based filtering has 3 different phases.
+\begin{itemize}
+\item Content Analyzer
+\item Profile Learner
+\item Filtering Component
+\end{itemize}
+
+\subsection{Feedback}
+When trying to ac	quire feedback from the user there are 2 separate ways. The first one is the Explicit Feedback where it is necessary for the user to give item evaluation or actively rate products. Most popular options are gathering like/dislike ratings on items or the ratings can be on a scale either from 1 to 5 or 1 to 10. After the ratings the user can also give comments on separate items. \\
+The other way is Implicit Feedback where the information is collected passively from analyzing the users activities. Some alternatives can be clicks on products, time spent on sites or even transaction history.\\
+
 
 
 \subsection{Hybrid approach}
@@ -168,17 +182,19 @@ There are 2 basic types of memory-based collaborative filtering which are:
 - data sparsity\\
 - scalability\\
 - bias and diversity\\
-- ...\\
+- ...\\\\
+- Exploration VS Exploitation\\\\
+
 
 \clearpage
-\subsection{Performance - measures}
+\subsection{Performance - measures - Metrics}
 - recall rate\\
 - root mean square error\\
 - precision\\
 - cumulative gain ?\\
 - accuracy\\
 - overall efficacy\\
-- f - measure\\
+- f1 - measure\\
 - ...\\
 
 
