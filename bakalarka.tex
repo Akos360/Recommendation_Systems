@@ -125,6 +125,8 @@ Both CB and CF approaches encounter significant challenges such as the Cold-Star
 \clearpage
 \subsection{Collaborative Filtering}
 One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\\\
+It can perform in domains where there is not much content associated with items, or
+where the content is difficult for a computer to analyze - ideas, opinions etc.\cite{melville:aaai02}\\
 Collaborative filtering can be divided into 2 methods which are "Memory-based" and "Model-Based" collaborative filtering. The first one relies on historical preferences, whereas the second method is based on machine learning models to predict the best options.\\\\
 There are 2 basic types of memory-based collaborative filtering which are:
 \begin{itemize}
@@ -137,18 +139,7 @@ There are 2 basic types of memory-based collaborative filtering which are:
 	\item Calculates similarity between items, rather than users. The user will probably like a new item which is similar to another item they were interested in before.\\
 	\end{itemize}
 \end{itemize}
-%
-%
-%
-\clearpage{}
-- POZ\\
-- analyzes relationships between users  and interdependencies among products to identify new user-item associations\\
-- recommend items or content to users by analyzing their interactions and similarities with other users\\\\
-\cite{5197422}\\\\
-%
-- long-tailed users - user groups with relatively uncommon or more diverse interests or preferences\\
-- association rules\\
-\cite{Yan2024}\\\\
+
 
 
 \subsection{Content-Based Filtering}
@@ -195,6 +186,7 @@ The other way is Implicit Feedback where the information is collected passively 
 - accuracy\\
 - overall efficacy\\
 - f1 - measure\\
+- Normalized Discounted Cumulative Gain (NDCG)\\
 - ...\\
 
 
@@ -227,6 +219,15 @@ stream, is known as concept drift.\cite{Sun2024}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage{}
+- POZ\\
+- analyzes relationships between users  and interdependencies among products to identify new user-item associations\\
+- recommend items or content to users by analyzing their interactions and similarities with other users\\\\
+\cite{5197422}\\\\
+%
+- long-tailed users - user groups with relatively uncommon or more diverse interests or preferences\\
+- association rules\\
+\cite{Yan2024}\\\\
 %
 \clearpage{}
 POZNAMKY\\
