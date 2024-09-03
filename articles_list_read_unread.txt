@@ -1,0 +1,269 @@
+REFERENCED
+===========================================
+10.1007/s10994-021-05993-w
+Analyzing and repairing concept drift adaptation in data stream classification
+
+10.17485/ijst/2017/v10i23/115568		BOOK
+Semantic Search Engine
+
+10.1007/978-3-031-22789-9				BOOK
+Understanding Search Engines
+
+10.1016/j.eswa.2017.09.058
+A recommender system based on collaborative filtering using ontology and dimensionality reduction techniques
+
+10.1007/s44196-024-00460-5
+A Sequential Recommendation Model for Balancing Long- and Short-Term Benefits
+
+10.1371/journal.pone.0282904
+UsCoTc: Improved Collaborative Filtering (CFL) recommendation methodology using user confidence, time context with impact factors for performance enhancement
+
+
+BOOK 73-105!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+10.1007/978-0-387-85820-3_3		chapter 3			10.1007/978-0-387-85820-3		whole book
+Content-based Recommender Systems: State of the Art and Trends
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+BOOK 896-906
+10.1007/978-3-030-92038-8_92
+Scientific Paper Recommender Systems: A Review
+
+
+10.1007/978-981-16-1395-1_70
+Content Based Scientific Article Recommendation System Using Deep Learning Technique
+
+
+10.1016/j.ipm.2016.12.003
+Introducing linked open data in graph-based recommender systems
+
+
+===========================================
+ALSO CITED
+===========================================
+
+10.14569/IJACSA.2014.051006
+Application of Content-Based Approach in Research Paper Recommendation System for a Digital Library
+
+
+10.1007/s44196-024-00429-4
+An Improved Fusion-Based Semantic Similarity Measure for Effective Collaborative Filtering Recommendations
+
+
+10.1007/s10639-022-11489-4
+What is needed to build a personalized recommender system for K-12 students’ E-Learning? Recommendations for future systems and a conceptual framework
+
+
+10.1109/MC.2009.263
+Matrix Factorization Techniques for Recommender Systems
+
+
+10.3390/e25091360
+Community-Based Matrix Factorization (CBMF) Approach for Enhancing Quality of Recommendations
+
+
+10.12688/f1000research.140393.3
+Search engine Performance optimization: methods and techniques
+
+
+10.1016/j.knosys.2024.111596				???
+Entropy-based concept drift detection in information systems
+
+
+10.1016/j.heliyon.2024.e30413
+Optimizing an English text reading recommendation model by integrating collaborative filtering algorithm and FastText classification method
+
+
+NO DOI ???? FROM BOOK 
+http://www.cs.utexas.edu/users/ai-lab?melville:aaai02
+Content-Boosted Collaborative Filtering for Improved Recommendations 
+
+10.1007/s11257-019-09231-w
+Trends in content-based recommendation
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+READ ------------------------------- WANT TO PUT IN SOMEHOW
+
+10.1038/s41598-024-66393-3
+A hybrid recommendation algorithm based on user nearest neighbor model
+
+10.1145/352871.352887
+Analysis of Recommendation Algorithms for E-Commerce
+
+10.1155/2022/2970514
+Personalized Recommendation Algorithm for Movie Data Combining Rating Matrix and User Subjective Preference
+
+10.1007/s11042-023-17370-x
+The ultimate recommendation system: proposed Pranik System
+
+10.1002/sim.9924					NMF, PCA, LDA, K-means
+Unsupervised learning for medical data: A review of probabilistic factorization methods
+
+10.1145/371920.372071
+Item-based collaborative filtering recommendation algorithms
+
+
+
+
+
+
+
+
+
+
+========================================
+CLUSTERING --- FUTURE PURPOSE
+
+10.1007/s10994-021-05993-w
+Analyzing and repairing concept drift adaptation in data stream classification
+
+10.1002/cpe.7010
+Memetic swarm clustering with deep belief network model for e-learning recommendation system to improve learning performance
+
+10.1007/s13278-024-01261-6
+Three-layered location recommendation algorithm using spectral clustering
+
+
+
+
+========================================
+
+==========
+BAD QUEUE
+==========
+
+10.1007/s10758-018-9395-7
+A Semantic Web-Based Recommendation Framework of Educational Resources in E-Learning
+
+10.1007/s40692-021-00199-4
+A systematic literature review on adaptive content recommenders in personalized learning environments from 2015 to 2020
+
+10.48550/arXiv.1205.2618
+BPR: Bayesian Personalized Ranking from Implicit Feedback
+
+10.1038/s41598-024-57240-6			NOT RELEASED YET - 2024 December
+Cross-domain information fusion and personalized recommendation in artificial intelligence recommendation system based on mathematical matrix decomposition
+
+10.3389/fpsyg.2021.767837
+Personalized Online Learning Resource Recommendation Based on Artificial Intelligence and Educational Psychology
+
+10.1186/s40561-024-00301-0
+Prerequisites-based course recommendation: recommending learning objects using concept prerequisites and metadata matching
+
+10.1371/journal.pone.0300240
+Transfer learning from rating prediction to Top-k recommendation
+
+10.3390/app122211686
+Utilizing Alike Neighbor Influenced Similarity Metric for Efficient Prediction in Collaborative Filter-Approach-Based Recommendation System
+
+
+
+
+
+
+
+
+10.48550/arXiv.1601.00670			LDA
+Variational Inference: A Review for Statisticians
+
+
+
+
+
+
+----------
+GOOD QUEUE
+----------
+
+10.48550/arXiv.1609.01415
+A Framework for Scientific Paper Retrieval and Recommender Systems
+
+10.1007/978-3-642-27302-5_2
+A Keyphrase-Based Paper Recommender System
+
+10.1016/j.procs.2014.10.015
+A Personalized Concept-driven Recommender System for Scientific Libraries
+
+https://ceur-ws.org/Vol-1448/
+Conceptual Impact-Based Recommender System for CiteSeerX
+
+10.1007/s11257-018-9206-9
+Content-based artwork recommendation: integrating painting metadata with neural and manually-engineered visual features
+
+10.1007/s41870-022-01123-4			LDA, DTM, ETM
+Extracting information and inferences from a large text corpus
+
+10.1007/s10489-022-03235-7
+Hashing-based semantic relevance attributed knowledge graph embedding enhancement for deep probabilistic recommendation
+
+10.1007/s00799-015-0156-0
+Research-paper recommender systems: a literature survey
+
+10.1023/A:1021819901281
+Studying Recommendation Algorithms by Graph Analysis
+
+10.1007/s11257-018-9217-6
+Addressing the user cold start with cross-domain collaborative filtering: exploiting item metadata in matrix factorization
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DONT KNOW - WHAT TO DO WITH THEM 
+
+10.1109/TCSS.2022.3187430
+A Cognitive Similarity-Based Measure to Enhance the Performance of Collaborative Filtering-Based Recommendation System 
+
+
+10.1109/TCSS.2021.3117885
+Movie Recommendation Systems Using Actor-Based Matrix Computations in South Korea
+
+
+10.2298/CSIS210925018S
+Development of Recommendation Systems Using Game Theoretic Techniques
+
+
+10.1142/S0219649222500411
+An Approach Using E-Khool User Log Data for E-Learning Recommendation System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -112,7 +112,8 @@ The main target of this project is to create a recommendation system that uses .
 \section{Analysis}
 Making decisions is not always easy. People are frequently presented with an overwhelming number of options when picking a product, a movie, or a destination to travel to, and each option comes with different levels of information and trustworthiness. \\
 When a user is trying to find a movie to watch, it would be hard for them to start searching without any starting options. After all a blank page and no suggestions to choose from might even make the user decide not to pick anything. \\ 
-Because of this amount of detail from all of the items, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user so that they will have a personalized list to select their favourite. The Recommendation systems provide users with well chosen options for products that fit their requirements and interests, sometimes even matching their tastes.\\\\
+Because of this amount of detail from all of the items, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user so that they will have a personalized list to select their favourite. Fast and efficient access to information is essential in any field of study. 
+The Recommendation systems provide users with well chosen options for products that fit their requirements and interests which are mostly supplied by inputs \cite{Philip2014}, sometimes even matching their tastes.\\\\
 Different types of recommendation systems exist, and their methods of operation vary. These recommendation types are divided into 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
 Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
 Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.\\\\
@@ -143,19 +144,23 @@ There are 2 basic types of memory-based collaborative filtering which are:
 
 
 \subsection{Content-Based Filtering}
-Recommender Systems which are using content-based filtering, review a variety of items, documents and their details. Each product has their own description which is collected to make a profile for each item. These profiles for items are different representations of information and users interest about the specific item. \\
+Recommender Systems which are using content-based filtering, review a variety of items, documents and their details. Each product has their own description which is collected to make a model for each item. The model of an item is so composed by a set of features representing its content. The main benefit of content-based recommendation methods is that they use obvious item features, making it easy to quickly explain why a particular item is being recommended. \cite{pub.1034486657}\\
+These profiles for items are different representations of information and users interest about the specific item. \\
 The recommendation process basically consists in matching
 up the attributes of the user profile against the attributes of a content object.
-\cite{pub.1034486657}\\
+\cite{pub.1034486657}\\\\
+There can also be side information about items, where this side information predominantly contains additional knowledge about the recommendable items, e.g., in terms of their features, metadata, category assignments, relations to other items, user-provided tags and comments, or related textual content. \cite{Lops2019239}\\\\
 The process for recommending items using content-based filtering has 3 different phases.
 \begin{itemize}
 \item Content Analyzer
 \item Profile Learner
 \item Filtering Component
 \end{itemize}
+- over-specialization problem can occur.\\
+
 
 \subsection{Feedback}
-When trying to ac	quire feedback from the user there are 2 separate ways. The first one is the Explicit Feedback where it is necessary for the user to give item evaluation or actively rate products. Most popular options are gathering like/dislike ratings on items or the ratings can be on a scale either from 1 to 5 or 1 to 10. After the ratings the user can also give comments on separate items. \\
+When trying to acquire feedback from the user there are 2 separate ways. The first one is the Explicit Feedback where it is necessary for the user to give item evaluation or actively rate products. Most popular options are gathering like/dislike ratings on items or the ratings can be on a scale either from 1 to 5 or 1 to 10. After the ratings the user can also give comments on separate items. \\
 The other way is Implicit Feedback where the information is collected passively from analyzing the users activities. Some alternatives can be clicks on products, time spent on sites or even transaction history.\\
 
 
@@ -173,6 +178,8 @@ The other way is Implicit Feedback where the information is collected passively 
 - data sparsity\\
 - scalability\\
 - bias and diversity\\
+- privacy\\
+- serendipity\\
 - ...\\\\
 - Exploration VS Exploitation\\\\
 
