@@ -1,7 +1,5 @@
 REFERENCED
 ===========================================
-10.1007/s10994-021-05993-w
-Analyzing and repairing concept drift adaptation in data stream classification
 
 10.17485/ijst/2017/v10i23/115568		BOOK
 Semantic Search Engine
@@ -16,7 +14,7 @@ A recommender system based on collaborative filtering using ontology and dimensi
 A Sequential Recommendation Model for Balancing Long- and Short-Term Benefits
 
 10.1371/journal.pone.0282904
-UsCoTc: Improved Collaborative Filtering (CFL) recommendation methodology using user confidence, time context with impact factors for performance enhancement
+Improved Collaborative Filtering (CFL) recommendation methodology using user confidence, time context with impact factors for performance enhancement
 
 
 BOOK 73-105!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -81,6 +79,17 @@ Content-Boosted Collaborative Filtering for Improved Recommendations
 10.1007/s11257-019-09231-w
 Trends in content-based recommendation
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+10.1007/s00799-015-0156-0
+Research-paper recommender systems: a literature survey
+
+
+10.1145/336597.336662
+Content-Based Book Recommending Using Learning for Text Categorization
+
+
+
+
 
 
 
@@ -105,35 +114,84 @@ Unsupervised learning for medical data: A review of probabilistic factorization 
 10.1145/371920.372071
 Item-based collaborative filtering recommendation algorithms
 
-
-
-
-
-
-
-
-
-
-========================================
-CLUSTERING --- FUTURE PURPOSE
-
 10.1007/s10994-021-05993-w
 Analyzing and repairing concept drift adaptation in data stream classification
 
-10.1002/cpe.7010
-Memetic swarm clustering with deep belief network model for e-learning recommendation system to improve learning performance
 
-10.1007/s13278-024-01261-6
-Three-layered location recommendation algorithm using spectral clustering
+
+
+
+
 
 
 
 
 ========================================
+----------
+GOOD QUEUE
+----------
+
+
+10.1007/s11257-006-9023-4
+A content-collaborative recommender that exploits WordNet-based user profiles for neighborhood formation
+
+
+https://aaai.org/papers/01132-aaai08-179-concept-based-feature-generation-and-selection-for-information-retrieval/
+Concept-Based Feature Generation and Selection for Information Retrieval
+
+https://aaai.org/papers/01301-aaai06-204-overcoming-the-brittleness-bottleneck-using-wikipedia-enhancing-text-categorization-with-encyclopedic-knowledge/
+Overcoming the Brittleness Bottleneck using Wikipedia: Enhancing Text Categorization with Encyclopedic Knowledge
+
+https://doi.org/10.1145/245108.245124
+FAB: Content-Based, Collaborative Recommendation
+
+https://aaai.org/papers/011-ws98-08-002/
+Recommendation as Classification: Using Social and Content-Based Information in Recommendation
+
+
+10.48550/arXiv.1609.01415
+A Framework for Scientific Paper Retrieval and Recommender Systems
+
+10.1007/978-3-642-27302-5_2
+A Keyphrase-Based Paper Recommender System
+
+10.1016/j.procs.2014.10.015
+A Personalized Concept-driven Recommender System for Scientific Libraries
+
+https://ceur-ws.org/Vol-1448/
+Conceptual Impact-Based Recommender System for CiteSeerX
+
+10.1007/s11257-018-9206-9
+Content-based artwork recommendation: integrating painting metadata with neural and manually-engineered visual features
+
+10.1007/s41870-022-01123-4			LDA, DTM, ETM
+Extracting information and inferences from a large text corpus
+
+10.1007/s10489-022-03235-7
+Hashing-based semantic relevance attributed knowledge graph embedding enhancement for deep probabilistic recommendation
+
+10.1023/A:1021819901281
+Studying Recommendation Algorithms by Graph Analysis
+
+10.1007/s11257-018-9217-6
+Addressing the user cold start with cross-domain collaborative filtering: exploiting item metadata in matrix factorization
+
+
+
 
 ==========
 BAD QUEUE
 ==========
+
+10.1145/280765.280786
+CiteSeer: an autonomous Web agent for automatic retrieval and identification of interesting publications
+
+10.1145/963770.963773
+Ontological user profiling in recommender systems
+
+10.1007/s10994-010-5205-8
+Relational retrieval using a combination of path-constrained random walks
+
 
 10.1007/s10758-018-9395-7
 A Semantic Web-Based Recommendation Framework of Educational Resources in E-Learning
@@ -161,53 +219,8 @@ Utilizing Alike Neighbor Influenced Similarity Metric for Efficient Prediction i
 
 
 
-
-
-
-
-
 10.48550/arXiv.1601.00670			LDA
 Variational Inference: A Review for Statisticians
-
-
-
-
-
-
-----------
-GOOD QUEUE
-----------
-
-10.48550/arXiv.1609.01415
-A Framework for Scientific Paper Retrieval and Recommender Systems
-
-10.1007/978-3-642-27302-5_2
-A Keyphrase-Based Paper Recommender System
-
-10.1016/j.procs.2014.10.015
-A Personalized Concept-driven Recommender System for Scientific Libraries
-
-https://ceur-ws.org/Vol-1448/
-Conceptual Impact-Based Recommender System for CiteSeerX
-
-10.1007/s11257-018-9206-9
-Content-based artwork recommendation: integrating painting metadata with neural and manually-engineered visual features
-
-10.1007/s41870-022-01123-4			LDA, DTM, ETM
-Extracting information and inferences from a large text corpus
-
-10.1007/s10489-022-03235-7
-Hashing-based semantic relevance attributed knowledge graph embedding enhancement for deep probabilistic recommendation
-
-10.1007/s00799-015-0156-0
-Research-paper recommender systems: a literature survey
-
-10.1023/A:1021819901281
-Studying Recommendation Algorithms by Graph Analysis
-
-10.1007/s11257-018-9217-6
-Addressing the user cold start with cross-domain collaborative filtering: exploiting item metadata in matrix factorization
-
 
 
 
@@ -233,22 +246,38 @@ An Approach Using E-Khool User Log Data for E-Learning Recommendation System
 
 
 
+10.1109/HIS.2008.25				NEEDS IEEE Explore Institutional sign in
+Introducing Serendipity in a Content-Based Recommender System
+
+
+
+10.1109/TKDE.2006.180			NEEDS IEEE Explore Institutional sign in
+Some Effective Techniques for Naive Bayes Text Classification
+
+
+10.1207/s15516709cog0304_3
+User Modeling via Stereotypes
+
+
+
+========================================
+CLUSTERING --- FUTURE PURPOSE
+
+10.1002/cpe.7010
+Memetic swarm clustering with deep belief network model for e-learning recommendation system to improve learning performance
+
+10.1007/s13278-024-01261-6
+Three-layered location recommendation algorithm using spectral clustering
 
 
 
 
 
+========================================
+MIND BLOWING FINDS
 
-
-
-
-
-
-
-
-
-
-
+10.1007/s10639-022-11229-8
+Artificial intelligence inspired multilanguage framework for note-taking and qualitative content-based analysis of lectures
 
 
 
