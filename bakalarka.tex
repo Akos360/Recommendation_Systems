@@ -93,16 +93,21 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 \listoftables
 \section*{List of Abbreviations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% \hspace{1.3em}
 
 \clearpage{} 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 \section{Introduction}
-As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government, and e-learning. To help users navigate this vast sea of content, Recommender Systems have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\\\
-The main target of this project is to create a recommendation system that uses ............. (text, materials).
+As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government or e-learning. To help users navigate this vast sea of content, Recommender Systems (RS) have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
 
+“Item” is the general term used to denote what the system recommends to users. A RS normally focuses on a specific type of item (e.g., CDs, or news) and accordingly its design, its graphical user interface, and the core recommendation technique used to generate the recommendations are all customized to provide useful and effective suggestions for that specific type of item. \cite{pub.1036183961}\\
+
+
+
+The main target of this project is to create a recommendation system that uses ............. (text, materials).\\\\\\
+MORE TEXT - 1.5 - 2 pages together for INTRODUCTION\\
 
 
 
@@ -111,29 +116,47 @@ The main target of this project is to create a recommendation system that uses .
 \clearpage{}
 \section{Analysis}
 Making decisions is not always easy. People are frequently presented with an overwhelming number of options when picking a product, a movie, or a destination to travel to, and each option comes with different levels of information and trustworthiness. \\
+While there are many situations in which users know exactly what they are looking for and would like immediate answers, in other cases they are willing to explore and extend their knowledge \cite{Blanco201333}.\\
 The main purpose of recommendation systems is to predict useful items, select some of them and after comparing them, the system recommends the most accurate ones.\\ 
+These Personalized recommendation systems are emerging as appropriate tools to aid and speed up the process of information seeking, considering the dramatic increase in big data \cite{Haruna2017}. They need to handle a large amount of textual data in order to accurately understand users’ reading preferences and generate corresponding recommendations \cite{Yan2024}. \\
 %
-Because of this amount of detail from all of the items, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user so that they will have a personalized list to select their favourite. Fast and efficient access to information is essential in any field of study. 
-The Recommendation systems provide users with well chosen options for products that fit their requirements and interests which are mostly supplied by inputs \cite{Philip2014}, sometimes even matching their tastes.\\
+Because of this amount of detail from all of the items, recommendation systems are becoming increasingly important. They help reduce options and offer better suggestions for the user so that they will have a personalized list to select their favourite. Fast and efficient access to information is essential in any field of study. Information systems often deal with changing data over time. The term called Concept drift describes when sometimes the patterns or behaviors in the data change unexpectedly which affects how the system makes predictions \cite{Sun2024}.\\
+The task to provide users with well chosen options for products that fit their requirements and interests is very important in todays consumer society. The products are mostly supplied by inputs \cite{Philip2014} , sometimes even matching the users distinct tastes.\\\\
 %
-When a user is trying to find a movie to watch, it would be hard for them to start searching without any starting options. After all a blank page and no suggestions to choose from might even make the user decide not to pick anything. \\\\
+When someone is trying to find a movie to watch, it would be hard for them to start searching without any starting options. After all a blank page and no suggestions to choose from might even make the user decide not to pick anything. \\\\
 %
-Different types of recommendation systems exist, and their methods of operation vary. These recommendation types are divided into 3 different categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two.\\
-Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
-Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.\\\\
-Both CB and CF approaches encounter significant challenges such as the Cold-Start Problem, Data Sparsity or Scalability. The Cold-Start Problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
+Recommending items can be done in a variety of ways. Several types of recommendation systems exist, and their methods of operation differ. These recommendation types can be divided into 3 main categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two. \\
+Other categories also include Knowledge-Based , Context-Aware, Popularity-Based and Deep Learning-Based Recommendation.\\\\
+%
+%
+Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.\\
+%
+%
+Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.\\
+%
+%
+Knowledge-Graphs use a network of data where items are linked through their features. Showing how items relate to one another and connecting them with more information and detail.\\
+%
+%
+Hybrid methods try to combine the useful characteristics of both collaborative filtering and content-based filtering methods. They take into account both the users past preferences and the preferences of other people who might share the users taste.\\
 %
 %
 %
 %
 %
 \clearpage
+\subsection{Role of Recommendation Systems}
+asd
+
+\clearpage
 \subsection{Collaborative Filtering}
 One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\\\
-It can perform in domains where there is not much content associated with items, or
-where the content is difficult for a computer to analyze - ideas, opinions etc.\cite{melville:aaai02}\\
+It can perform in domains where there is not much content associated with items, or where the content is difficult for a computer to analyze - ideas, opinions etc.\cite{melville:aaai02}\\
 Collaborative filtering can be divided into 2 methods which are "Memory-based" and "Model-Based" collaborative filtering. The first one relies on historical preferences, whereas the second method is based on machine learning models to predict the best options.\\\\
-There are also 2 basic types of memory-based collaborative filtering which are:
+%
+\textbf{Memory-based CF}\\
+Recommender systems based on memory automate the common principle that similar users prefer similar items, and similar items are preferred by similar users \cite{Ning201537}. \\
+Memory-based collaborative filtering, which can also be called Neighborhood-based is further divided into 2 basic types, which are:
 \begin{itemize}
 \item User-Based Collaborative Filtering
 	\begin{itemize}
@@ -141,48 +164,126 @@ There are also 2 basic types of memory-based collaborative filtering which are:
 	\end{itemize}
 \item Item-Based Collaborative Filtering
 	\begin{itemize}
-	\item Calculates similarity between items, rather than users. The user will probably like a new item which is similar to another item they were interested in before.\\
+	\item Calculates similarity between items, rather than users. The user will probably like a new item which is similar to another item they were interested in before.
 	\end{itemize}
 \end{itemize}
-It is important to mention that the effectiveness depends on the ratio of users and items. For example when trying to recommend songs, there are usually way more users than songs and generally, many users listened to the same songs or same genres. Which means like-minded users are found easily and the recommendations will be effective. On the other hand, in a different field, when it comes to recommending books or articles the systems deals with millions of articles but a lot less users. This leads to less ratings on papers or no ratings at all, so it is harder to find like-minded individuals \cite{Beel2016305}.\\
+%
+When trying to implement this type of recommendation system it is important to consider the key components, which are: 
+\begin{itemize}
+\item Rating Normalization - adjusts individual user ratings to a standard scale by addressing personal rating habits. Using for example Mean-Centering or Z-Score Normalization. 
+\item Similarity Weight Computation - helps to select reliable neighbors for prediction and deciding how much impact each neighbor's rating has. A lot of Similarity measures can be used, such as Correlation-Based Similarity, Mean Squared Difference or Spearman Rank Correlation. 
+\item Neighborhood Selection - selects the most appropriate candidates for making predictions based on each unique scenario, eliminating the least likely ones to leave only the best options.
+\end{itemize}
+%
+%
+\textbf{Model-based CF}\\
+Recommender systems based on models, also known as Learning-based methods, try to develop a parametric model of the relationships between items and users. These models can capture patterns in the data, which can not be seen in the previous recommendation type. \\\\
+Model-based algorithms do not suffer from memory-based drawbacks and can create prediction over a shorter period of time compared to memory-based algorithms because these algorithms perform off-line computation for training. 
+The well-known machine learning techniques for this approach are matrix factorization, clustering, probabilistic Latent Semantic Analysis (pLSA) and machine learning on the graph \cite{NILASHI2018507}. \\\\
+%
+%
+%
+\textbf{Matrix Factorization}\\
+In its basic form, matrix factorization characterizes both items and users by vectors of factors inferred from item rating patterns. High correspondence between item and user factors leads to recommendations \cite{5197422}. \\
+People prefer to rate just a small percentage of items, therefore the user-item rating matrix, that tracks the ratings people assign to various items, is frequently sparse.\\
+In order to deal with this sparsity, matrix factorization (MF) algorithms split the matrix into two lower-rank matrices: one that shows the latent properties of the items and another that reflects the underlying user preferences. These latent representations can be used to predict future ratings or complete the matrix's missing ratings after factorization \cite{Tokala2023}.\\\\
+%
+%
+%
+%
+\textbf{Advantages and Disadvantages of CF}\\
+MORE TEXT - 0.5 page\\\\\\
+%
+%
+It is important to mention that the effectiveness depends on the ratio of users and items. For example when trying to recommend songs, there are usually way more users than songs and generally, many users listened to the same songs or same genres. Which means like-minded users are found easily and the recommendations will be effective. On the other hand, in a different field, when it comes to recommending books or articles the systems deals with millions of articles but a lot less users. This leads to less ratings on papers or no ratings at all, so it is harder to find people with shared interests \cite{Beel2016305}.\\
+
+
+
+
+
+
 
 
 \subsection{Content-Based Filtering}
-Recommender Systems which are using content-based filtering, review a variety of items, documents and their details. Each product has their own description which is collected to make a model for each item. The model of an item is so composed by a set of features representing its content. The main benefit of content-based recommendation methods is that they use obvious item features, making it easy to quickly explain why a particular item is being recommended. \cite{pub.1034486657}\\
+Recommender Systems which are using content-based filtering, review a variety of items, documents and their details. Each product has their own description which is collected to make a model for each item. The model of an item is composed by a set of features representing its content. The main benefit of content-based recommendation methods is that they use obvious item features, making it easy to quickly describe why a particular item is being recommended. \cite{pub.1034486657}\\
+This also allows for the possibility of providing explanations that list content features that caused an item to be recommended, potentially giving readers confidence in the system’s recommendations and insight into their own preferences \cite{Mooney2000195}. \\
 These profiles for items are different representations of information and users interest about the specific item. \\
-The recommendation process basically consists in matching
-up the attributes of the user profile against the attributes of a content object.
-\cite{pub.1034486657}\\\\
+The recommendation process basically consists in matching up the attributes of the user profile against the attributes of a content object. \cite{pub.1034486657}\\
+%
+%
 There can also be side information about items, where this side information predominantly contains additional knowledge about the recommendable items, e.g., in terms of their features, metadata, category assignments, relations to other items, user-provided tags and comments, or related textual content. \cite{Lops2019239}\\\\
-The process for recommending items using content-based filtering has 3 different phases.
+The process for recommending items using content-based filtering has 3 different phases:
 \begin{itemize}
-\item Content Analyzer
-\item Profile Learner
-\item Filtering Component
+\item Content Analyzer - Turns the unstructured information (text) into structured, organized information using pre-processing steps which are basic methods in Information Retrieval, such as feature extraction.
+\item Profile Learner - Collects data of the users preference (feedback) that can be either positive information reffering to features which the active user likes or negative ones which the user does not like. After generalization it tries to construct user profiles for later use.
+\item Filtering Component - Matches the items for the user, based on the similarities between item representations and user profiles, meaning it compares the features of new items with features in user preferences that are stored in the users profile. \cite{DeGemmis2015119}
 \end{itemize}
 %
+The user modeling process has the goal to identify what are the users needs and this can be done 2 ways. Either the system calculates them from the interactions between the user and items through feedback or the user can specify these needs directly by giving keywords to the system, providing search queries \cite{Beel2016305}. \\\\
+%
+%
+\textbf{Feedback}\\
+When trying to acquire helpful information or criticism that is given by the user there are 2 separate ways. \\
+The first one is called Explicit Feedback where it is necessary for the user to give item evaluation or actively rate products. Most popular options are gathering like/dislike ratings on items or the ratings can be on a scale either from 1 to 5 or 1 to 10. After the ratings the user can also give comments on separate items. \\\\
+The other way is called Implicit Feedback where the information is collected passively from analyzing the users activities. Some alternatives can be clicks on products, time spent on sites or even transaction history \cite{DeGemmis2015119}.\\\\
 %
 %
 %
+\textbf{Advantages and Disadvantages of CB Filtering}\\
+MORE TEXT - 0.5 page\\\\
 %
 %
+\textbf{Semantics ?}\\
+- connect with CB and/or knowledge graph\\
 %
---------------------------------------------------------\\
-The user modeling process has the goal to identify what are the users needs and this can be done 2 ways. Either the system calculates them from the interactions between the user and items or the user can specify these needs directly by giving keywords to the system, providing search queries \cite{Beel2016305}. \\
+%
+\textbf{Ontology ?}\\
+- describe it\\
+- connect with semantics\\
 
 
-\subsection{Feedback}
-When trying to acquire feedback from the user there are 2 separate ways. The first one is the Explicit Feedback where it is necessary for the user to give item evaluation or actively rate products. Most popular options are gathering like/dislike ratings on items or the ratings can be on a scale either from 1 to 5 or 1 to 10. After the ratings the user can also give comments on separate items. \\\\
-The other way is Implicit Feedback where the information is collected passively from analyzing the users activities. Some alternatives can be clicks on products, time spent on sites or even transaction history.\\
 
+
+\clearpage
+\subsection{Knowledge Graphs}
+Knowledge graph is a knowledge base that uses a graph-structured data model. It is a graphical databases which contains a large amount of relationship information between entities and can be used as a convenient way to enrich users and items information. \cite{Imene2022488}\\\\
+%
+MORE TEXT - DETAILS - 1.5 - 2 pages
 
 
 \subsection{Hybrid approach}
 - uses both the CF and the CB filtering, for more accuracy\\\\
-When trying to choose which recommendation approach is the best, first it is important to know the use case for the specific system. In the field of libraries, research paper and article recommendation, a study shows that more than half of the recommendation approaches applied content-based filtering \cite{Beel2016305}.
+%
+MORE TEXT - 0.5 page\\
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\subsection{Search Engines}
+Search Engines have become crucial for navigating the vast amount of information available online. They make it possible for people to quickly look up solutions, learn new things, and browse the wide variety of resources available on the internet. Search engine optimization is now necessary to guarantee that search engines deliver relevant results, quick search times, and a top-notch user experience given the explosive growth of online information.\\
+A search engine is essentially a software that finds the information the user needs using keywords or phrases. It delivers results rapidly, even with millions of websites available online.
+The importance of speed in online searches is highlighted by how even minor delays in retrieval can negatively affect users' perception of result quality.
+\cite{pub.1171882357}
+
+
+
+
+
+
+
+\clearpage
+\subsection{Chosen Algorithms - Comparison}
+When trying to choose which recommendation approach is the best, first it is important to know the use case for the specific system. \\
+%
+In the domain of scientific publications, where users are relatively few with respect to the available documents, information needs and interests easily change in an unpredictable way over time due to evolving professional needs, there is no advertising pushing new items, and the long tail of infrequently read articles may contain the so-called sleeping beauties, that are documents containing extremely relevant results, but that remain unknown to most researchers for a very long time. The Content-based approach does not require particular assumptions over the size and the activity of the user base. It does not penalize items that have less ratings or are less frequently consumed by many users as long as enough metadata are available, which even allows detailed explanations. These advantages over Collaborative Filtering techniques make this approach particularly attractive to the purpose of providing recommendation in the domain of scientific publications \cite{De_Nart201484}. \\
+%
+A study shows that more than half of the recommendation approaches applied Content-based filtering, when making recommendations for research papers and articles in libraries \cite{Beel2016305}. \\
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -196,6 +297,7 @@ When trying to choose which recommendation approach is the best, first it is imp
 - over-specialization problem can occur - CBF\\
 - ...\\\\
 - Exploration VS Exploitation\\\\
+Both CB and CF approaches encounter significant challenges such as the Cold-Start Problem, Data Sparsity or Scalability. The Cold-Start Problem arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}\\\\
 
 
 \clearpage
@@ -211,98 +313,46 @@ When trying to choose which recommendation approach is the best, first it is imp
 - ...\\
 
 
-\clearpage
-\subsection{Semantics ?}
-
-\subsection{Ontology ?}
-
-\subsection{Matrix Factorization}
-Matrix factorization (MF) is a technique utilized in collaborative filtering to decompose
-a matrix of user-item ratings into lower-rank matrices capturing the latent factors under-
-lying the data\cite{Tokala2023}.\\
-People prefer to rate just a small percentage of items, therefore the user-item rating matrix, that tracks the ratings people assign to various items, is frequently sparse.\\
-In order to deal with this sparsity, matrix factorization (MF) algorithms split the matrix into two lower-rank matrices: one that shows the latent properties of the items and another that reflects the underlying user preferences. These latent representations can be used to predict future ratings or complete the matrix's missing ratings after factorization.
-
-\subsection{Search Engines}
-Search Engines have become crucial for navigating the vast amount of information available online. They make it possible for people to quickly look up solutions, learn new things, and browse the wide variety of resources available on the internet. Search engine optimization is now necessary to guarantee that search engines deliver relevant results, quick search times, and a top-notch user experience given the explosive growth of online information.\\
-A search engine is essentially a software that finds the information the user needs using keywords or phrases. It delivers results rapidly, even with millions of websites available online.
-The importance of speed in online searches is highlighted by how even minor delays in retrieval can negatively affect users' perception of result quality.
-\cite{pub.1171882357}
-
-\clearpage
-\subsection{Concept Drift ?}
-Concept Drift - Entropy-based\\\\
-Information systems inevitably experience frequent data changes. 
-This change in the statistical properties of the target variable, caused by
-unforeseeable variations in the underlying distribution of the data
-stream, is known as concept drift.\cite{Sun2024}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage{}
-POZNAMKY\\
-Most content-based systems are conceived as text clas-
-sifiers built from training sets including documents which are either positive or neg-
-ative examples of user interests
-%
-%
-%
-Content-Based Book Recommending Using Learning for Text Categorization\\\\
-THIS CAN PROVE THAT CF IS BAD FOR BOOKS \cite{Mooney2000195}\\
-Items that have not been rated
-by a sufficient number of users cannot be effectively recom-
-mended. Unfortunately, statistics on library use indicate that
-most books are utilized by very few patrons Therefore,
-collaborative approaches naturally tend to recommend popu-
-lar titles, perpetuating homogeneity in reading choices. Also,
-since significant information about other users is required to
-make recommendations, this approach raises concerns about
-privacy and access to proprietary customer data. Finally, al-
-though newly introduced items are frequently of particular
-interest to users, it is impossible for a collaborative approach
-to recommend items that no one has yet rated or purchased
-%
-%
-- analyzes relationships between users  and interdependencies among products to identify new user-item associations\\
-- recommend items or content to users by analyzing their interactions and similarities with other users\\\\
-\cite{5197422}\\\\
-%
-- long-tailed users - user groups with relatively uncommon or more diverse interests or preferences\\
-- association rules\\
-\cite{Yan2024}\\\\
-%
-%
------------------------------------------------------------\\
-- user confidence\\
-- time context\\\\
-- personalized -vs- not personalized(recommend based on huge amount of people) recommendations\\
-- recommend specific subject, study material, field of study, examples, lessons\\
-- "At first it is important to describe / to outline / to define ..."\\
-%
-%
-- Material difficulty level - features\\
-- Comments, reviews, ratings, number of views, content, inquiries, and other factors can be used to automatically assign a difficulty level.\\\\
-- four primary stages: student profiling, material collection, material filtering, and material validation. \\
-- Machine Learning (ML), Decision Making (DM) approaches\\
-- Each stage is explained in detail in the sub-sections below.\\
-- The DM techniques were used to extract keywords from the material provided to develop queries\\\\
-- MATERIALS: textbooks, lecture notes, additional questions, quizzes, exam samples, reports, articles, and books\\\\
-%
-I. The content-based module: The module is responsible for analyzing the con-
-tents of the materials and representing each material with a set of keywords and
-assigning them to topics and courses.
-II. The collaborative module: The module used the ratings, reviews, and number of
-views of the materials in the student’s history.
-III. The contextual module: The module used the students’ marks and level of
-performance.
-IV. The serendipity module: The module used the publicity of the materials and their
-reviews in the material database.
-\cite{Zayet20237487}\\\\
-%
-CLASSIFICATION METHODS\\
-- Text classification\\
-automatically categorizing textual data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

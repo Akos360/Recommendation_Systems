@@ -18,10 +18,17 @@ Improved Collaborative Filtering (CFL) recommendation methodology using user con
 
 
 BOOK 73-105!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-10.1007/978-0-387-85820-3_3		chapter 3			10.1007/978-0-387-85820-3		whole book
+10.1007/978-0-387-85820-3_3		chapter 3			
+10.1007/978-0-387-85820-3		whole book
 Content-based Recommender Systems: State of the Art and Trends
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+10.1007/978-0-387-85820-3_1
+Introduction to Recommender Systems Handbook
+
+
+10.1007/978-1-4899-7637-6_4
+Semantics-aware content-based recommender systems
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 BOOK 896-906
 10.1007/978-3-030-92038-8_92
@@ -34,6 +41,13 @@ Content Based Scientific Article Recommendation System Using Deep Learning Techn
 
 10.1016/j.ipm.2016.12.003
 Introducing linked open data in graph-based recommender systems
+
+
+10.1007/978-3-030-92038-8_49
+Knowledge Graph-Based Approaches for Related Entities Recommendation
+
+10.1145/3109859.3109889
+entity2rec: Learning User-Item Relatedness from Knowledge Graphs for Top-N Item Recommendation
 
 
 ===========================================
@@ -64,8 +78,6 @@ Community-Based Matrix Factorization (CBMF) Approach for Enhancing Quality of Re
 Search engine Performance optimization: methods and techniques
 
 
-10.1016/j.knosys.2024.111596				???
-Entropy-based concept drift detection in information systems
 
 
 10.1016/j.heliyon.2024.e30413
@@ -86,6 +98,32 @@ Research-paper recommender systems: a literature survey
 
 10.1145/336597.336662
 Content-Based Book Recommending Using Learning for Text Categorization
+
+
+10.1016/j.procs.2014.10.015
+A Personalized Concept-driven Recommender System for Scientific Libraries
+
+
+10.1007/978-3-642-41338-4_3		BOOK								!
+Entity Recommendations in Web Search
+
+10.1007/s10489-021-02758-9											!
+EKPN: enhanced knowledge-aware path network for recommendation
+
+
+10.3390/electronics12224654
+BookGPT: A General Framework for Book Recommendation Empowered by Large Language Model
+
+
+10.1016/j.knosys.2024.111596				???
+Entropy-based concept drift detection in information systems
+
+
+
+
+
+
+
 
 
 
@@ -126,15 +164,87 @@ Analyzing and repairing concept drift adaptation in data stream classification
 
 
 
-========================================
+======================================== 
 ----------
 GOOD QUEUE
 ----------
 
 
+10.1007/s44196-024-00460-5 ___________________________________________________not released yet	
+
+
+
+10.1145/3535101
+Graph Neural Networks in Recommender Systems: A Survey
+https://github.com/wusw14/GNN-in-RS?tab=readme-ov-file
+
+
+10.1007/978-3-319-93935-3_9		BOOK								!
+Utilizing Entities for an Enhanced Search Experience
+
+
+10.3390/app7121211
+Context-Aware Recommender System: A Review of Recent Developmental Process and Future Research Direction
+
+
+10.1016/j.eswa.2014.09.017		(digital ibraries) !!!
+A systematic review of scholar context-aware recommender systems
+
+10.1016/j.ins.2011.01.012
+A google wave-based fuzzy recommender system to disseminate information in University Digital Libraries 2.0
+
+
+
+HANDBOOKS
+
+10.1007/978-1-0716-2197-4_6		BOOK !!!
+Context-Aware Recommender Systems: From Foundations to Recent Developments
+
+10.1007/978-1-4899-7637-6_2
+A comprehensive survey of neighborhood-based recommendation methods
+
+10.1007/978-1-0716-2197-4_7
+Semantics and Content-Based Recommendations
+
+
+
+ACM ??!!
+https://dl.acm.org/doi/10.1145/2959100.2959131
+Personalized Recommendations using Knowledge Graphs: A Probabilistic Logic Programming Approach
+
+
+https://ceur-ws.org/Vol-1673/
+https://ceur-ws.org/Vol-1673/paper5.pdf
+RDF Graph Embeddings for Content-based Recommender Systems
+
+
+10.1007/978-3-642-04930-9_28
+Investigating the Semantic Gap through Query Log Analysis
+
+
+10.1007/978-3-642-30284-8_9
+Linked Data-Based Concept Recommendation: Comparison of Different Methods in Open Innovation Scenario
+
+
+
+
+---
+
+10.1007/978-3-642-27302-5_2
+A Keyphrase-Based Paper Recommender System
+
+10.1007/s10489-022-03235-7
+Hashing-based semantic relevance attributed knowledge graph embedding enhancement for deep probabilistic recommendation
+
+10.1023/A:1021819901281
+Studying Recommendation Algorithms by Graph Analysis
+
+
+---
+
+
 10.1007/s11257-006-9023-4
 A content-collaborative recommender that exploits WordNet-based user profiles for neighborhood formation
-
 
 https://aaai.org/papers/01132-aaai08-179-concept-based-feature-generation-and-selection-for-information-retrieval/
 Concept-Based Feature Generation and Selection for Information Retrieval
@@ -148,15 +258,8 @@ FAB: Content-Based, Collaborative Recommendation
 https://aaai.org/papers/011-ws98-08-002/
 Recommendation as Classification: Using Social and Content-Based Information in Recommendation
 
-
 10.48550/arXiv.1609.01415
 A Framework for Scientific Paper Retrieval and Recommender Systems
-
-10.1007/978-3-642-27302-5_2
-A Keyphrase-Based Paper Recommender System
-
-10.1016/j.procs.2014.10.015
-A Personalized Concept-driven Recommender System for Scientific Libraries
 
 https://ceur-ws.org/Vol-1448/
 Conceptual Impact-Based Recommender System for CiteSeerX
@@ -166,12 +269,6 @@ Content-based artwork recommendation: integrating painting metadata with neural 
 
 10.1007/s41870-022-01123-4			LDA, DTM, ETM
 Extracting information and inferences from a large text corpus
-
-10.1007/s10489-022-03235-7
-Hashing-based semantic relevance attributed knowledge graph embedding enhancement for deep probabilistic recommendation
-
-10.1023/A:1021819901281
-Studying Recommendation Algorithms by Graph Analysis
 
 10.1007/s11257-018-9217-6
 Addressing the user cold start with cross-domain collaborative filtering: exploiting item metadata in matrix factorization
