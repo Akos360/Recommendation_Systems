@@ -28,6 +28,13 @@ Introduction to Recommender Systems Handbook
 
 10.1007/978-1-4899-7637-6_4
 Semantics-aware content-based recommender systems
+
+
+
+
+
+10.1007/978-1-0716-2197-4_1
+Recommender Systems: Techniques, Applications, and Challenges
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 BOOK 896-906
@@ -187,13 +194,26 @@ Utilizing Entities for an Enhanced Search Experience
 Context-Aware Recommender System: A Review of Recent Developmental Process and Future Research Direction
 
 
+10.1109/WIIAT.2008.204
+Ontology-based Personalised and Context-aware Recommendations of News Items
+
+
+-------- Digital libraries
 10.1016/j.eswa.2014.09.017		(digital ibraries) !!!
 A systematic review of scholar context-aware recommender systems
+
 
 10.1016/j.ins.2011.01.012
 A google wave-based fuzzy recommender system to disseminate information in University Digital Libraries 2.0
 
 
+--------
+10.1023/A:1021240730564
+Hybrid Recommender Systems Survey and Experiments
+
+
+10.1186/s40537-023-00776-7
+Improved content recommendation algorithm integrating semantic information
 
 HANDBOOKS
 
@@ -208,7 +228,11 @@ Semantics and Content-Based Recommendations
 
 
 
-ACM ??!!
+ACM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+MARS: a MultilAnguage Recommender System
+10.1145/1869446.1869450
+
 https://dl.acm.org/doi/10.1145/2959100.2959131
 Personalized Recommendations using Knowledge Graphs: A Probabilistic Logic Programming Approach
 
