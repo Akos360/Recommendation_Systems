@@ -176,9 +176,23 @@ Analyzing and repairing concept drift adaptation in data stream classification
 GOOD QUEUE
 ----------
 
+https://iris.poliba.it/handle/11589/89488?mode=simple.1362
+RDF graph embeddings for content-based recommender systems
 
 10.1007/s44196-024-00460-5 ___________________________________________________not released yet	
 
+
+10.1145/3308558.3313417
+Knowledge Graph Convolutional Networks for Recommender Systems
+
+10.1609/aaai.v29i1.9491 
+Learning Entity and Relation Embeddings for Knowledge Graph Completion
+
+10.1609/aaai.v33i01.33015329
+Explainable Reasoning over Knowledge Graphs for Recommendation
+
+https://dblp.org/rec/journals/pvldb/SunHYYW11.html
+PathSim: Meta Path-Based Top-K Similarity Search in Heterogeneous Information Networks
 
 
 10.1145/3535101

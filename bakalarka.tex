@@ -1,5 +1,11 @@
-\documentclass[10pt,oneside,english,hidelinks,a4paper]{article} 
+\newcommand{\myFontSize}[0] {10pt}
+\newcommand{\mySpacing}[0] {1.3}
+
+\documentclass[\myFontSize,oneside,english,hidelinks,a4paper]{book} 
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{setspace}
 \usepackage{url} 
 \usepackage{doi} 
 \usepackage{cite}
@@ -9,47 +15,74 @@
 \usepackage{titlesec}
 %\PassOptionsToPackage{pdfborder={0 0 0}}{hyperref}
 \usepackage{hyperref}
+\usepackage[a4paper, top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
+\usepackage[parfill]{parskip}
+
+\usepackage{lipsum}
+
+\setstretch{\mySpacing}
+\setcounter{tocdepth}{3}
+
+\newcommand{\thesisTitle}[0] {Odporúčacie systémy založené na AI}
 
 %\usepackage[backend=biber,style=numeric]{biblatex}
 %\usepackage[sorting=none]{biblatex} %\addbibresource{literature.bib}
 %\DeclareFieldFormat{doi}{doi:\texttt{#1}} %\renewcommand*{\doi}[1]{doi:\texttt{#1}}
 %\bibliography{literature}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Slovenská technická univerzita v Bratislave Fakulta informatiky a informačných technológií
-% Bakalárska práca
-
-\title{\Large \textbf{Slovak University of Technology in Bratislava\\
-Faculty of Informatics and Information Technologies} \ \\ \vspace{4\baselineskip} \Large{ Ákos
-Lévárdy } \ \\ \LARGE{ Odporúčacie systémy založené na AI } \ \\ \ \\ \large{
-Bachelor thesis} }
-
-%\author{Ákos Lévárdy}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
-\maketitle
-\thispagestyle{empty}
-\vspace{7\baselineskip} 		% vertical space 
-\hspace{-2cm} 			% horizontal position
-\parbox{0.8\textwidth}{ 
-\raggedright 			% Left-align the text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\Large Degree course: Informatics\\ 
+\begin{center}
+\thispagestyle{empty}
+{\Large Slovak University of Technology in Bratislava}
+\par\end{center}{\Large \par}
+
+\begin{center}
+{\Large Faculty of Informatics and Information Technologies} 
+\par\end{center}{\Large \par}
+
+\smallskip{}
+
+\vfill{}
+
+\begin{center}
+\textbf{\Large Ákos Lévárdy}
+\par\end{center}{\Large \par}
+
+\medskip{}
+
+\begin{center}
+\textbf{\Large \thesisTitle}
+\par\end{center}{\Large \par}
+
+\medskip{}
+
+\begin{center}
+{\Large Bachelor thesis}
+\par\end{center}{\Large \par}
+
+\vfill{}
+
+\Large{
+Degree course: Informatics\\ 
 Field of study: 9.2.1 Informatics\\ 
 Place: FIIT STU, Bratislava\\ 
-Supervisor: PaedDr. Pavol Baťalík \\}
+Supervisor: PaedDr. Pavol Baťalík\\
+\today}
 
-%\Large Študijný program: Informatika\\ 
-%Študijný odbor: 9.2.1 Informatika\\ 
-%Miesto vypracovania: FIIT STU, Bratislava\\ 
-%Vedúci práce: PaedDr. Pavol Baťalík \\}
-
+%\maketitle
+%\thispagestyle{empty}
+%\vspace{4\baselineskip} 		% vertical space 
+%\hspace{-2cm} 					% horizontal position
+%\parbox{0.8\textwidth}{ 
+%\raggedright 					% Left-align the text
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\LARGE\bfseries}{\thesubsection}{1em}{}
+\titleformat{\section}{\LARGE\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\Large\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\Large\bfseries}{\thesubsubsection}{1em}{}
 
 %
@@ -65,33 +98,74 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 %\Huge
 %
 
- %\today  
-\pagenumbering{roman}
-\newpage{} 
-\setcounter{page}{2}
+\newpage{}
+\thispagestyle{empty}
+\mbox{}
 
-\hspace{-2cm} \Large \textbf{ANNOTATION}\\
-500 words
+\newpage{} 
+\thispagestyle{empty}
+\section*{ANNOTATION}
+\begin{minipage}[t]{1\columnwidth}%
+Slovak University of Technology Bratislava 
+
+Faculty of Informatics and Information Technologies
+
+Degree Course: Informatics\\
+
+Author: Ákos Lévárdy
+
+Diploma Thesis: \thesisTitle
+
+Supervisor: PaedDr. Pavol Baťalík
+
+\today%
+\end{minipage}
+\bigskip{}
+
+500 characters
+
 
 \newpage{}
-\setcounter{page}{3}
+\thispagestyle{empty}
+\mbox{}
 
-\hspace{-2cm} \Large \textbf{ANOTÁCIA}\\ 
-500 slov 
+\newpage{}
+\thispagestyle{empty}
+\section*{ANOTÁCIA}
+\begin{minipage}[t]{1\columnwidth}%
+Slovenská technická univerzita v Bratislave
+
+Fakulta informatiky a informačných technológií
+
+Študijný program: Informatika\\
+
+Autor: Ákos Lévárdy
+
+Diplomová práca: \thesisTitle
+
+Vedúci diplomového projektu: PaedDr. Pavol Baťalík
+
+\today%
+\end{minipage}
+\bigskip{}
+
+500 karakterov 
 
 
-\newpage{} 		% Čestné vyhlásenie
-\setcounter{page}{4}
-\vspace*{\fill}
-\noindent \Large \textbf{DECLARATION OF OATH}\\
-\noindent I hereby declare upon my honour that I wrote this thesis single-handed with usage of quoted literature and based on my knowledge and professional supervision of my supervisor.
-\vspace*{\fill} 
-\vspace{-8cm} 
+%\pagenumbering{roman}
+
+%\newpage{} 		% Čestné vyhlásenie
+%\setcounter{page}{4}
+%\vspace*{\fill}
+%\noindent \Large \textbf{DECLARATION OF OATH}\\
+%\noindent I hereby declare upon my honour that I wrote this thesis single-handed with usage %of quoted literature and based on my knowledge and professional supervision of my supervisor.
+%\vspace*{\fill} 
+%\vspace{-8cm} 
 
 
 
 \newpage 			% Poďakovanie
-\setcounter{page}{5}
+\setcounter{page}{4}
 \vspace*{\fill} 
 \noindent \Large \textbf{ACKNOWLEDGMENT}\\
 \noindent First and foremost, I would like to thank my supervisor for their invaluable guidance and support throughout the duration of this project.
@@ -105,7 +179,7 @@ Supervisor: PaedDr. Pavol Baťalík \\}
 
 \newpage{} 
 
-\setcounter{page}{6}
+\setcounter{page}{5}
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage{}
@@ -146,7 +220,7 @@ Similarly, \textbf{Search Engines} are essential for navigating the vast amount 
 A search engine is essentially a software that finds the information the user needs using keywords or phrases. It delivers results rapidly, even with millions of websites available online.
 The importance of speed in online searches is highlighted by how even minor delays in retrieval can negatively affect users' perception of result quality \cite{pub.1171882357}.\\
 %
-While both recommendation systems and search engines aim to help users navigate all this information, they do it differently. Personalized recommendation systems make suggestions based on past user behavior and preferences, whereas search engines use keyword-based searches to retrieve content from a selection of sources.\\\\
+While both Recommendation Systems (Information Filtering techniques) and Search Engines (Information Retrieval techniques) aim to help users navigate all this information, they do it differently. Personalized recommendation systems make suggestions based on past user behavior and preferences, whereas search engines use keyword-based searches to retrieve content from a selection of sources.\\\\
 %
 Information systems often deal with changing data over time. The term called Concept drift describes when sometimes the patterns or behaviors in the data change unexpectedly which affects how the system makes predictions \cite{Sun2024}.\\
 The task to provide users with well chosen options for products that fit their requirements and interests is very important in todays consumer society. The products are mostly supplied by inputs \cite{Philip2014} , sometimes even matching the users distinct tastes.\\\\
@@ -159,15 +233,15 @@ Other categories also include Knowledge-Based, Context-Aware, Popularity-Based, 
 %
 \textbf{Basic ideas of the recommendation techniques:}
 \begin{itemize}[label=--]
-\item Content-Based Filtering works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
-\item Collaborative Filtering relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.
-\item Knowledge-Graphs use a network of data where items are linked through their features. Showing how items relate to one another and connecting them with more information and detail.
-\item Context-Aware recommendation systems are adding contextual factors to the rating process, where the recommended item is based on the users explicit ratings, the items implicitly inferred ratings and also the contextual variables. The variables can be for example when recommending a movie can be the location from where the user watches the movie, the time and the companion who the user watches the movie with.
-\item Popularity-Based recommendations offer products that are popular or well-liked by a lot of users, They assume that these popular items are likely to be of interest to the majority of users, not considering their personal preferences.
-\item Demographic 
-\item Utility-Based 
-\item Deep Learning-Based are trying to find complex patterns in the users behaviour and the items features using deep learning algorithms and neural networks. These models can locate hidden links and can offer highly customized recommendations.
-\item Hybrid methods try to combine the useful characteristics of both collaborative filtering and content-based filtering methods. They take into account both the users past preferences and the preferences of other people who might share the users taste.
+\item \textbf{Content-Based Filtering} works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
+\item \textbf{Collaborative Filtering} relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.
+\item \textbf{Knowledge-Graphs} use a network of data where items are linked through their features. Showing how items relate to one another and connecting them with more information and detail.
+\item \textbf{Context-Aware} recommendation systems are adding contextual factors to the rating process, where the recommended item is based on the users explicit ratings, the items implicitly inferred ratings and also the contextual variables. The variables can be for example when recommending a movie can be the location from where the user watches the movie, the time and the companion who the user watches the movie with.
+\item \textbf{Popularity-Based} recommendations offer products that are popular or well-liked by a lot of users, They assume that these popular items are likely to be of interest to the majority of users, not considering their personal preferences.
+\item \textbf{Demographic} recommendation systems are recommending items based on a demographic profile of the user. They categorize the users from their personal attributes and try to make user stereotypes.
+\item \textbf{Utility-Based} systems generate the recommendations by computing the utility of each item for the user. The utility of an item refers to how valuable it is to a user and is calculated using a utility function which combines different factors of the user's preferences \cite{Burke2002331}.
+\item \textbf{Deep Learning-Based} are trying to find complex patterns in the users behaviour and the items features using deep learning algorithms and neural networks. These models can locate hidden links and can offer highly customized recommendations.
+\item \textbf{Hybrid methods} try to combine the useful characteristics of both collaborative filtering and content-based filtering methods. They take into account both the users past preferences and the preferences of other people who might share the users taste.
 \end{itemize}
 %
 %
@@ -204,10 +278,10 @@ From the users point of view the recommendation system can help in implementing 
 \clearpage
 
 \subsection{Recommendation Techniques}
-As mentioned before recommendation techniques are generaly categorized into three approaches which are Collaborative Filtering, Content-Based Filtering and Hybrid Approaches. These methods differ in how they generate recommendations and offer unique advantages.\\
+As mentioned before recommendation techniques are generaly categorized into three approaches which are Collaborative Filtering, Content-Based Filtering and Hybrid Approaches. These methods differ in how they generate recommendations and offer unique advantages.
 %
 \subsubsection{Collaborative Filtering}
-One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\\\
+One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\
 It can perform in domains where there is not much content associated with items, or where the content is difficult for a computer to analyze - ideas, opinions etc.\cite{melville:aaai02}\\
 Collaborative filtering can be divided into 2 methods which are "Memory-based" and "Model-Based" collaborative filtering. The first one relies on historical preferences, whereas the second method is based on machine learning models to predict the best options.\\\\
 %
@@ -288,36 +362,55 @@ The other way is called Implicit Feedback where the information is collected pas
 \item Transparency - explanations for the recommended items can be provided explicitly by listing the content features which were used to get that recommendation. On the other hand Collaborative systems are considered black boxes, where explanations are based on similar tastes of different users.
 \item New Item - when a new item is added to the system, the Content-based method is capable of recommending it from the set features and its content. This is not possible for the Collaborative method which needs ratings for the new item to be able to recommend it.
 \item Limited Content Analysis - because the system can only analyze a certain number of features and can miss important aspects such as aesthetics or other multimedia information. Also, systems based on string matching approach can suffer from problems such as synonymy, polysemy or multi-word expressions.
-\item Over-Specialization - the user will mostly be recommended things similar to what they already liked, which drawback is called 'lack of serendipity'. For example, if the user only rated action movies, then the system would not recommend other genres, which limits the chance of recommending items with novelty or surpise. \cite{DeGemmis2015119}\\\\\\\\
+\item Over-Specialization - the user will mostly be recommended things similar to what they already liked, which drawback is called 'lack of serendipity'. For example, if the user only rated action movies, then the system would not recommend other genres, which limits the chance of recommending items with novelty or surpise. \cite{DeGemmis2015119}\\\\
 \end{itemize}
 %
 %
 %
-TF-IDF!!!\\
-Naive Bayes - Bayesian classifier\\
-\textbf{Semantics ?}\\
-- connect with CB and/or knowledge graph\\
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1TF-IDF!!!\\
+%Naive Bayes - Bayesian classifier\\
+%
+% LINKED OPEN DATA - CB and also KG
+%
+\textbf{Semantics}\\
+There is a difference in Top-Down or Bottom-Up Semantics Approaches.\\\\
 %
 %
 \textbf{Ontology}\\
 An ontology is a structured description that shows how different parts of a system depend on each other and how they are connected. It organizes key concepts in a specific domain into a hierarchy, which can explain their relationships and the characteristics of each concept. It can help to understand how specific examples of these concepts behave and how they are related \cite{pub.1090632691}.\\\\
 %
-REWRITE THIS\\
-Ontologies are used to describe domain-
-specific knowledge and they are commonly handled as hierarchies of concepts
-with attributes and relations, which establish a terminology to define semantic
-networks of interrelated concepts and instances. In general, when a domain model
-is represented as an ontology, items and user models consist of a subset of concepts
-from the domain ontology, possibly with associated values characterizing their
-importance.\cite{DeGemmis2015119}
+%REWRITE THIS\\
+%Ontologies are used to describe domain-
+%specific knowledge and they are commonly handled as hierarchies of concepts
+%with attributes and relations, which establish a terminology to define semantic
+%networks of interrelated concepts and instances. In general, when a domain model
+%is represented as an ontology, items and user models consist of a subset of concepts
+%from the domain ontology, possibly with associated values characterizing their
+%importance.\cite{DeGemmis2015119}
 
 
 
 \clearpage
 \subsubsection{Knowledge Graphs}
-Knowledge graph is a knowledge base that uses a graph-structured data model. It is a graphical databases which contains a large amount of relationship information between entities and can be used as a convenient way to enrich users and items information. \cite{Imene2022488}\\\\
+Knowledge graph is a knowledge base that uses a graph-structured data model. It is a graphical databases which contains a large amount of relationship information between entities and can be used as a convenient way to enrich users and items information \cite{Imene2022488}.\\
 %
-3 types of knowledge - catalog, functional, user (hybrid article shows them)
+The idea is that attributes of users and items are not isolated but linked up with each other, which forms a knowledge graph (KG). Incorporating a Knowledge Graph into recommendations can help the results in ways like:
+\begin{itemize}
+\item The rich semantic relatedness among items in a KG can help explore their latent connections and improve the precision of results
+\item The various types of relations in a KG are helpful for extending a user’s interests reasonably and increasing the diversity of recommended items
+\item KG connects a user’s historically-liked and recommended items, thereby bringing explainability to recommender systems. \cite{Wang20193307}
+\end{itemize}
+%
+Basically a knowledge graph is a directed graph whose nodes are the entities and the edges are the relations between them. They are usually defined as triplets with a head entity, tail entity and a relationship connecting them. The graphs have detailed supporting information which is background knowledge of items and their relations amongst them. The facts of items are organized in those triplets like (Ed Sheeran, IsSingerOf, Shape of You), which can be seamlessly integrated with user-item interactions. This interaction data is usually presented as a
+bipartite graph \cite{pub.1120733877}. \\
+The crucial point to leverage knowledge graphs to perform item recommendations is to be able to effectively model user-item relatedness from this rich heterogeneous network \cite{Palumbo201732}. \\\\ 
+%
+%
+%
+Recommendation methods based on knowledge graphs can be practically categorized into two different types which are Path-based and Embedding-based methods. Where the \textbf{Embedding-based} method uses knowledge graph embedding (KGE) techniques trying to learn how to represent users and items. This method uses representation learning to find connections implicitly, rather than using user preferences. Models such as TransE, TransR and TransH build entity and relation embeddings by regarding a relation as translation from head entity to tail entity. These models simply put both entities and relations within the same semantic space. \cite{pub.1148917041}\\
+The \textbf{Path-based} method focuses on enhancing the connections called meta-paths that link the users and items, showing how similar they are \cite{Yang20229308}. \\
+%
+% !!!!!!!!!!!!!!!!!!!!!!!! 3 types of knowledge - catalog, functional, user (hybrid article shows them)
 
 
 \subsubsection{Hybrid approach}
@@ -361,7 +454,7 @@ All recommendation systems encounter significant challenges.\\
 \item Serendipity
 \item Exploration vs. Exploitation
 \end{itemize}
-
+%!!!!!!!!!!!!!!!!!!!!!!!!! scientific paper recommender systems - dobre rozpisane difficulties
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -383,39 +476,6 @@ A study shows that more than half of the recommendation approaches applied Conte
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
