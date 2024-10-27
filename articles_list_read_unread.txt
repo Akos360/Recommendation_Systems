@@ -125,9 +125,8 @@ BookGPT: A General Framework for Book Recommendation Empowered by Large Language
 10.1016/j.knosys.2024.111596				???
 Entropy-based concept drift detection in information systems
 
-
-
-
+10.5120/19308-0760
+Survey on Collaborative Filtering, Content-based Filtering and Hybrid Recommendation System
 
 
 
@@ -175,6 +174,14 @@ Analyzing and repairing concept drift adaptation in data stream classification
 ----------
 GOOD QUEUE
 ----------
+
+BOOOOOOOOK
+10.1007/978-3-642-39878-0_17
+Exploiting Big Data for Enhanced Representations in Content-Based Recommender Systems
+
+10.1186/s40537-022-00592-5
+A systematic review and research perspective on recommender systems
+
 
 https://iris.poliba.it/handle/11589/89488?mode=simple.1362
 RDF graph embeddings for content-based recommender systems

@@ -1,7 +1,7 @@
 \newcommand{\myFontSize}[0] {10pt}
 \newcommand{\mySpacing}[0] {1.3}
 
-\documentclass[\myFontSize,oneside,english,hidelinks,a4paper]{book} 
+\documentclass[\myFontSize,oneside,english,hidelinks,a4paper]{article} 
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{longtable}
@@ -196,12 +196,12 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 \section{Introduction}
 As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government or e-learning. To help users navigate this vast sea of content, Recommender Systems (RS) have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
 
-“Item” is the general term used to denote what the system recommends to users. A RS normally focuses on a specific type of item (e.g., CDs, or news) and accordingly its design, its graphical user interface, and the core recommendation technique used to generate the recommendations are all customized to provide useful and effective suggestions for that specific type of item. \cite{pub.1036183961}\\
+“Item” is the general term used to denote what the system recommends to users. A RS normally focuses on a specific type of item (e.g., movies, books or news) and accordingly its design, its graphical user interface, and the core recommendation technique used to generate the recommendations are all customized to provide useful and effective suggestions for that specific type of item. \cite{pub.1036183961}\\
 
 
 
 The main target of this project is to create a recommendation system that uses ............. (text, materials).\\\\\\
-MORE TEXT - 1.5 - 2 pages together for INTRODUCTION\\
+
 
 
 
@@ -223,7 +223,7 @@ The importance of speed in online searches is highlighted by how even minor dela
 While both Recommendation Systems (Information Filtering techniques) and Search Engines (Information Retrieval techniques) aim to help users navigate all this information, they do it differently. Personalized recommendation systems make suggestions based on past user behavior and preferences, whereas search engines use keyword-based searches to retrieve content from a selection of sources.\\\\
 %
 Information systems often deal with changing data over time. The term called Concept drift describes when sometimes the patterns or behaviors in the data change unexpectedly which affects how the system makes predictions \cite{Sun2024}.\\
-The task to provide users with well chosen options for products that fit their requirements and interests is very important in todays consumer society. The products are mostly supplied by inputs \cite{Philip2014} , sometimes even matching the users distinct tastes.\\\\
+The task to provide users with currently available options for products that fit their requirements and interests is very important in todays consumer society. These products are mostly supplied by inputs \cite{Philip2014} , sometimes even matching the users distinct tastes.\\\\
 %
 When someone is trying to find a movie to watch, it would be hard for them to start searching without any starting options. After all a blank page and no suggestions to choose from might even make the user decide not to pick anything. \\\\
 %
@@ -236,18 +236,18 @@ Other categories also include Knowledge-Based, Context-Aware, Popularity-Based, 
 \item \textbf{Content-Based Filtering} works in a way that it creates user profiles and suggests the individual items or products based on the users past choices with similar items. The items have various features and characteristics which connect them.
 \item \textbf{Collaborative Filtering} relies more on preferences of other users and their behaviour. The point is that users who had similar interests before will have them again in the future for new items.
 \item \textbf{Knowledge-Graphs} use a network of data where items are linked through their features. Showing how items relate to one another and connecting them with more information and detail.
-\item \textbf{Context-Aware} recommendation systems are adding contextual factors to the rating process, where the recommended item is based on the users explicit ratings, the items implicitly inferred ratings and also the contextual variables. The variables can be for example when recommending a movie can be the location from where the user watches the movie, the time and the companion who the user watches the movie with.
-\item \textbf{Popularity-Based} recommendations offer products that are popular or well-liked by a lot of users, They assume that these popular items are likely to be of interest to the majority of users, not considering their personal preferences.
+\item \textbf{Context-Aware} recommendation systems are adding contextual factors to the rating process, where the recommended item is based on the users explicit ratings, the items implicitly inferred ratings and also the contextual variables. The variables for example when recommending a movie can be the location from where the user watches the movie, the time and the companion who the user watches the movie with.
+\item \textbf{Popularity-Based} recommendations offer products that are popular or well-liked by a lot of users. They assume that these popular items are likely to be of interest to the majority of users, not considering their personal preferences.
 \item \textbf{Demographic} recommendation systems are recommending items based on a demographic profile of the user. They categorize the users from their personal attributes and try to make user stereotypes.
 \item \textbf{Utility-Based} systems generate the recommendations by computing the utility of each item for the user. The utility of an item refers to how valuable it is to a user and is calculated using a utility function which combines different factors of the user's preferences \cite{Burke2002331}.
 \item \textbf{Deep Learning-Based} are trying to find complex patterns in the users behaviour and the items features using deep learning algorithms and neural networks. These models can locate hidden links and can offer highly customized recommendations.
-\item \textbf{Hybrid methods} try to combine the useful characteristics of both collaborative filtering and content-based filtering methods. They take into account both the users past preferences and the preferences of other people who might share the users taste.
+\item \textbf{Hybrid methods} try to combine the useful characteristics of both collaborative filtering and content-based filtering methods. They take into account both the users past preferences and the preferences of other people who might share the users taste. \\
 \end{itemize}
 %
 %
 %
 %
-\clearpage
+%
 \subsection{Role of Recommendation Systems}
 The Recommendation System can have a range of roles to play. First it is important to distinguish on whose behalf the role is played, which can be either the service providers or the users side. For example, a recommendation system for music, implemented by a streaming service like Spotify wants to increase user engagement by recommending new playlists and songs, which leads to more subscriptions or advertisement revenue. While on the other hand the user wants to listen to personalized playlists and discover songs they might like.\\\\
 There are more ways why a service provider would want to utilize such technology:
@@ -278,7 +278,8 @@ From the users point of view the recommendation system can help in implementing 
 \clearpage
 
 \subsection{Recommendation Techniques}
-As mentioned before recommendation techniques are generaly categorized into three approaches which are Collaborative Filtering, Content-Based Filtering and Hybrid Approaches. These methods differ in how they generate recommendations and offer unique advantages.
+As mentioned before recommendation techniques are generaly categorized into three approaches which are Collaborative Filtering, Content-Based Filtering and Hybrid Approaches. These methods differ in how they generate recommendations and offer unique advantages. The efficiency of a recommender system greatly depends on the type of algorithm used and the nature of the data source, which may be contextual, textual, visual etc. \cite{Roy2022}\\\\
+In the following section the techniques Collaborative Filtering, Content-based Filtering, Knowledge Graphs and Hybrid Approaches are described in more detail.\\
 %
 \subsubsection{Collaborative Filtering}
 One of the most popular methods used for personalized recommendations is collaborative filtering. This method filters information from users, which means it compares users behaviour, interactions with items and data, item correlation and ratings from users. \\
@@ -303,7 +304,7 @@ When trying to implement this type of recommendation system it is important to c
 \begin{itemize}
 \item Rating Normalization - adjusts individual user ratings to a standard scale by addressing personal rating habits. Using for example Mean-Centering or Z-Score Normalization. 
 \item Similarity Weight Computation - helps to select reliable neighbors for prediction and deciding how much impact each neighbor's rating has. A lot of Similarity measures can be used, such as Correlation-Based Similarity, Mean Squared Difference or Spearman Rank Correlation. 
-\item Neighborhood Selection - selects the most appropriate candidates for making predictions based on each unique scenario, eliminating the least likely ones to leave only the best options.
+\item Neighborhood Selection - selects the most appropriate candidates for making predictions based on each unique scenario, eliminating the least likely ones to leave only the best options. \cite{Ning201537}
 \end{itemize}
 %
 %
@@ -338,7 +339,7 @@ These profiles for items are different representations of information and users 
 The recommendation process basically consists in matching up the attributes of the user profile against the attributes of a content object. \cite{pub.1034486657}\\
 %
 %
-There can also be side information about items, where this side information predominantly contains additional knowledge about the recommendable items, e.g., in terms of their features, metadata, category assignments, relations to other items, user-provided tags and comments, or related textual content. \cite{Lops2019239}\\\\
+Some additional side information about items can be also useful, where this side information predominantly contains additional knowledge about the recommendable items, e.g., in terms of their features, metadata, category assignments, relations to other items, user-provided tags and comments, or related textual content. \cite{Lops2019239}\\\\
 The process for recommending items using content-based filtering has 3 different phases:
 \begin{itemize}
 \item Content Analyzer - Turns the unstructured information (text) into structured, organized information using pre-processing steps which are basic methods in Information Retrieval, such as feature extraction.
@@ -356,41 +357,39 @@ The other way is called Implicit Feedback where the information is collected pas
 %
 %
 %
-\textbf{Advantages and Disadvantages of CB Filtering}\\
+\textbf{Advantages and Disadvantages of CB Filtering}
 \begin{itemize}
 \item User Idependence - meaning the ratings taken into consideration are only provided by the active user to build their own profile. Collaborative approaches will recommend items based on ratings from other users in the nearest neighborhood.
 \item Transparency - explanations for the recommended items can be provided explicitly by listing the content features which were used to get that recommendation. On the other hand Collaborative systems are considered black boxes, where explanations are based on similar tastes of different users.
 \item New Item - when a new item is added to the system, the Content-based method is capable of recommending it from the set features and its content. This is not possible for the Collaborative method which needs ratings for the new item to be able to recommend it.
 \item Limited Content Analysis - because the system can only analyze a certain number of features and can miss important aspects such as aesthetics or other multimedia information. Also, systems based on string matching approach can suffer from problems such as synonymy, polysemy or multi-word expressions.
-\item Over-Specialization - the user will mostly be recommended things similar to what they already liked, which drawback is called 'lack of serendipity'. For example, if the user only rated action movies, then the system would not recommend other genres, which limits the chance of recommending items with novelty or surpise. \cite{DeGemmis2015119}\\\\
+\item Over-Specialization - the user will mostly be recommended things similar to what they already liked, which drawback is called 'lack of serendipity'. For example, if the user only rated action movies, then the system would not recommend other genres, which limits the chance of recommending items with novelty or surpise. \cite{DeGemmis2015119}\\
 \end{itemize}
 %
 %
 %
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1TF-IDF!!!\\
-%Naive Bayes - Bayesian classifier\\
 %
-% LINKED OPEN DATA - CB and also KG
+\textbf{Semantic approaches in CB Recommendation}\\
+In short Semantics refer to interpretation of meaning in language, words and symbols. Using semantic techniques the represantations of items and user profiles shift from keyword-based to concept-based ones.  With these represantations it is possible to give meaning to information expressed in natural language and to get a deeper understanding of the information presented by textual content.\\
+Content-based recommendations can adopt two different approaches based on how the semantics are derived and applied:
+\begin{itemize}
+\item \textbf{Top-Down Semantic Approaches} use an external knowledge to improve the representation of the items and users. This external knowledge can be: ontological resources, encyclopedic knowledge (ESA, BabelNet) and the Linked Open Data cloud. For example the \textbf{Ontology} is a structured description that shows how different parts of a system depend on each other and how they are connected. It organizes key concepts in a specific domain into a hierarchy, which can explain their relationships and the characteristics of each concept. It can help to understand how specific examples of these concepts behave and how they are related \cite{pub.1090632691}.
 %
-\textbf{Semantics}\\
-There is a difference in Top-Down or Bottom-Up Semantics Approaches.\\\\
+\item \textbf{Bottom-Up Semantic Approaches} use implicit semantic representation of items and user profiles, where the meanings of terms are assumed by analyzing its usage. They rely on the distributional hypothesis: "words that occur in the same context tend to have similar meanings". Without a predefined structure, this approach analyzes the words co-occurrence with other words, larger texts or documents using Discriminative Models.\cite{DeGemmis2015119}\\
+\end{itemize}
 %
 %
-\textbf{Ontology}\\
-An ontology is a structured description that shows how different parts of a system depend on each other and how they are connected. It organizes key concepts in a specific domain into a hierarchy, which can explain their relationships and the characteristics of each concept. It can help to understand how specific examples of these concepts behave and how they are related \cite{pub.1090632691}.\\\\
+The semantic approaches can be further categorized by the source of knowledge used to extract meaning, which are \textbf{Endogenous Semantics} and \textbf{Exogenous Semantics}.\\
+In the first case, the semantics is obtained by exploiting unstructured data, and is directly inferred from the available information. Different techniques for these Implicit Semantics Representations are for example the Term Frequency - Inverse Document Frequency (TF-IDF) weighting, or the Distributional Semantics Models (DSM) such as Explicit Semantics Analysis (ESA), Random Indexing or Word Embedding Techniques.
+Word embedding technology can reflect the semantic information of words to a certain extent. The semantic distance between words can be calculated by word vectors. Commonly used word vectors are based on Word2vec and Fasttext models \cite{Huang2023}.\\\\
 %
-%REWRITE THIS\\
-%Ontologies are used to describe domain-
-%specific knowledge and they are commonly handled as hierarchies of concepts
-%with attributes and relations, which establish a terminology to define semantic
-%networks of interrelated concepts and instances. In general, when a domain model
-%is represented as an ontology, items and user models consist of a subset of concepts
-%from the domain ontology, possibly with associated values characterizing their
-%importance.\cite{DeGemmis2015119}
-
-
-
-\clearpage
+In the second, the semantics comes from the outside, since it is obtained by mining and exploiting data
+which are previously encoded in structured and external knowledge sources. For these Explicit Semantics Representations there are also different techniques like Linking Item Features to Concepts using Word Sense Disambiguation (WSD) or using Entity Linking, or Linking Items to Knowledge Graphs using Ontologies or Linked Open Data (LOD). \cite{Musto2022251} \\
+The LOD cloud is a huge decentralized knowledge base where researchers and organizations publish their data in Resource Description Framework (RDF) format and adopt shared vocabularies, in order to express an agreed semantics and interlink the data to each other \cite{Musto2017405}.\\
+%
+%
+%
+%\clearpage
 \subsubsection{Knowledge Graphs}
 Knowledge graph is a knowledge base that uses a graph-structured data model. It is a graphical databases which contains a large amount of relationship information between entities and can be used as a convenient way to enrich users and items information \cite{Imene2022488}.\\
 %
@@ -410,10 +409,9 @@ The crucial point to leverage knowledge graphs to perform item recommendations i
 Recommendation methods based on knowledge graphs can be practically categorized into two different types which are Path-based and Embedding-based methods. Where the \textbf{Embedding-based} method uses knowledge graph embedding (KGE) techniques trying to learn how to represent users and items. This method uses representation learning to find connections implicitly, rather than using user preferences. Models such as TransE, TransR and TransH build entity and relation embeddings by regarding a relation as translation from head entity to tail entity. These models simply put both entities and relations within the same semantic space. \cite{pub.1148917041}\\
 The \textbf{Path-based} method focuses on enhancing the connections called meta-paths that link the users and items, showing how similar they are \cite{Yang20229308}. \\
 %
-% !!!!!!!!!!!!!!!!!!!!!!!! 3 types of knowledge - catalog, functional, user (hybrid article shows them)
 
 
-\subsubsection{Hybrid approach}
+\subsubsection{Hybrid Approaches}
 The Hybrid recommender systems try to combine two or more recommendation techniques to get to better performance and accuracy. The most common approach is to have a collaborative filtering technique combined with some other technique to try to avoid the ramp-up problem.
 The ramp-up problem actually means two problems, which are "New User" and "New Item" problems (hard to categorize with few ratings).\\
 Different types of hybrid recommender systems exist, which are the following \cite{Burke2002331}:
@@ -421,45 +419,34 @@ Different types of hybrid recommender systems exist, which are the following \ci
 \item \textbf{Weighted hybrid} - initially gives equal weight to all available recommendation techniques in the system. Gradually adjusts the weighting based on wether the predicted user ratings are confirmed or discomfirmed. The recommended items score is computed from the results.
 \item \textbf{Switching hybrid} - the system switches between recommendation techniques based on some criterion. The advantage is that the system can adapt to the strengths and weaknesses of the different recommendation methods it combines.
 \item \textbf{Mixed hybrid} - recommendations from more than one technique are presented together at the same time. 
-\item \textbf{Feature combination} - for example in a content / collaborative merger the system treats the collaborative information as an additional feature data and uses content-based techniques over this enhanced\\ dataset.
+\item \textbf{Feature combination} - for example in a content / collaborative merger the system treats the collaborative information as an additional feature data and uses content-based techniques over this enhanced dataset.
 \item \textbf{Cascade hybrid} - one recommender produces a coarse ranking of candidates and than the other refines the recommendations given by the first one. The second step only focuses on the items given by the first step and not all items in the dataset.
 \item \textbf{Feature augmentation} - one technique produces a rating of an item and that information is then incorporated into processing the next recommendation technique. The features used by the second recommender include the output of the first one (like ratings).
-\item \textbf{Meta-level hybrid} - combines two techniques by using the model generated by one as the input for the other, meaning the entire model becomes the input.
+\item \textbf{Meta-level hybrid} - combines two techniques by using the model generated by one as the input for the other, meaning the entire model becomes the input.\\
 \end{itemize}
-
-
-
-
-
-
-
-
-
-
-
-
-
+%
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-
+%
 \subsection{Difficulties related to RS}
-All recommendation systems encounter significant challenges.\\
+All types of recommendation systems encounter significant challenges which they have to face and issues they have to solve. Here are some main challenges:
 %
 \begin{itemize}
 \item Cold-start problem - arises when making recommendations to new users and/or items for which the available information is limited. As a result, the recommendations offered in such cases tend to be of poor quality and lack usefulness.\cite{Al-Hassan2024a}
-\item Data sparsity
-\item Scalability
-\item Diversity
-\item Privacy
-\item Serendipity
-\item Exploration vs. Exploitation
+\item Data sparsity - when recommender systems use large datasets, the user-item matrix used for filtering can be sparse, which leads to worse performance of recommendations.
+\item Scalability - as the number of users and items increases, so does the complexity of the algorithms used for recommending items.
+\item Diversity - helps to discover new products, but some algorithms may accidentally do the opposite, which can also lead to lower accuracy in the recommendation process. \cite{pub.1072601078}
+\item Privacy - because the information collected by the system usually includes sensitive information that users wish to keep private, users may have a negative impression if the system knows too much about them.
+\item Serendipity - sometimes can be useful, but if the result of the recommendation system only has
+serendipitous items and does not have related items, user may think that the system is not reliable. \cite{Aymen2022896}\\
+%\item Exploration vs. Exploitation
 \end{itemize}
-%!!!!!!!!!!!!!!!!!!!!!!!!! scientific paper recommender systems - dobre rozpisane difficulties
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
 
-\subsection{Chosen Algorithms - Comparison}
+\subsection{Chosen Algorithms - Comparison - Evaluation}
 When trying to choose which recommendation approach is the best, first it is important to know the use case for the specific system. \\
 %
 In the domain of scientific publications, where users are relatively few with respect to the available documents, information needs and interests easily change in an unpredictable way over time due to evolving professional needs, there is no advertising pushing new items, and the long tail of infrequently read articles may contain the so-called sleeping beauties, that are documents containing extremely relevant results, but that remain unknown to most researchers for a very long time. \\
@@ -467,15 +454,6 @@ The Content-based approach does not require particular assumptions over the size
 %
 A study shows that more than half of the recommendation approaches applied Content-based filtering, when making recommendations for research papers and articles in libraries \cite{Beel2016305}. \\
 %
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
