@@ -1,7 +1,10 @@
 \newcommand{\myFontSize}[0] {10pt}
 \newcommand{\mySpacing}[0] {1.3}
 
+\newcommand{\thesisTitle}[0] {Odporúčacie systémy založené na AI}
+
 \documentclass[\myFontSize,oneside,english,hidelinks,a4paper]{article} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{longtable}
@@ -13,26 +16,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{titlesec}
-%\PassOptionsToPackage{pdfborder={0 0 0}}{hyperref}
+\usepackage{multicol}
 \usepackage{hyperref}
 \usepackage[a4paper, top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 \usepackage[parfill]{parskip}
 
 \usepackage{lipsum}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \setstretch{\mySpacing}
 \setcounter{tocdepth}{3}
 
-\newcommand{\thesisTitle}[0] {Odporúčacie systémy založené na AI}
 
-%\usepackage[backend=biber,style=numeric]{biblatex}
-%\usepackage[sorting=none]{biblatex} %\addbibresource{literature.bib}
-%\DeclareFieldFormat{doi}{doi:\texttt{#1}} %\renewcommand*{\doi}[1]{doi:\texttt{#1}}
-%\bibliography{literature}
-
-
-\begin{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
 
 \begin{center}
 \thispagestyle{empty}
@@ -152,7 +151,7 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 500 karakterov 
 
 
-%\pagenumbering{roman}
+
 
 %\newpage{} 		% Čestné vyhlásenie
 %\setcounter{page}{4}
@@ -163,7 +162,7 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 %\vspace{-8cm} 
 
 
-
+\pagenumbering{roman}
 \newpage 			% Poďakovanie
 \setcounter{page}{4}
 \vspace*{\fill} 
@@ -178,9 +177,11 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage{} 
-
 \setcounter{page}{5}
+\renewcommand{\contentsname}{Table of Contents}
 \tableofcontents
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage{}
 \listoffigures
@@ -194,18 +195,19 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 \setcounter{page}{1}
 
 \section{Introduction}
-As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government or e-learning. To help users navigate this vast sea of content, Recommender Systems (RS) have become fundamental. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
-
+As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government or e-learning. To help users navigate this vast sea of content, Recommender Systems (RS) have become fundamental. These systems are not designed just for saving time for users, but they are enhancing the users experience when using the said system, by anticipating their needs and relevant items or topics to discover. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
+%
 “Item” is the general term used to denote what the system recommends to users. A RS normally focuses on a specific type of item (e.g., movies, books or news) and accordingly its design, its graphical user interface, and the core recommendation technique used to generate the recommendations are all customized to provide useful and effective suggestions for that specific type of item. \cite{pub.1036183961}\\
-
-
-
+%
+The basic principle of recommendations is that significant dependencies exist between user- and item-centric activity. 
+For example, a user who is interested in a historical documentary is more likely to be interested in another historical documentary or an educational program, rather than in an action movie. \cite{pub.1022525812}\\\\
+%
 The main target of this project is to create a recommendation system that uses ............. (text, materials).\\\\\\
 
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage{}
 \section{Analysis}
@@ -340,13 +342,21 @@ The recommendation process basically consists in matching up the attributes of t
 %
 %
 Some additional side information about items can be also useful, where this side information predominantly contains additional knowledge about the recommendable items, e.g., in terms of their features, metadata, category assignments, relations to other items, user-provided tags and comments, or related textual content. \cite{Lops2019239}\\\\
-The process for recommending items using content-based filtering has 3 different phases:
+The process for recommending items using content-based filtering has 3 different phases and this high level architecture is shown in Fig.~\ref{fig:high_lvl_content_based}.:
 \begin{itemize}
 \item Content Analyzer - Turns the unstructured information (text) into structured, organized information using pre-processing steps which are basic methods in Information Retrieval, such as feature extraction.
 \item Profile Learner - Collects data of the users preference (feedback) that can be either positive information reffering to features which the active user likes or negative ones which the user does not like. After generalization it tries to construct user profiles for later use.
 \item Filtering Component - Matches the items for the user, based on the similarities between item representations and user profiles, meaning it compares the features of new items with features in user preferences that are stored in the users profile. \cite{pub.1034486657}
 \end{itemize}
 %
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/content_based_figure_1.png}
+    \caption{High level architecture of a content-based recommender \cite{Musto2022251}}
+    \label{fig:high_lvl_content_based}
+\end{figure}
+
 The user modeling process has the goal to identify what are the users needs and this can be done 2 ways. Either the system calculates them from the interactions between the user and items through feedback or the user can specify these needs directly by giving keywords to the system, providing search queries \cite{Beel2016305}. \\\\
 %
 %
@@ -429,7 +439,7 @@ Different types of hybrid recommender systems exist, which are the following \ci
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\subsection{Difficulties related to RS}
+\subsection{Difficulties related to Recommendation Systems}
 All types of recommendation systems encounter significant challenges which they have to face and issues they have to solve. Here are some main challenges:
 %
 \begin{itemize}
@@ -446,8 +456,37 @@ serendipitous items and does not have related items, user may think that the sys
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Chosen Algorithms - Comparison - Evaluation}
+\subsection{Evaluation of Recommendation Systems}
 When trying to choose which recommendation approach is the best, first it is important to know the use case for the specific system. \\
+The process of finding the most appropriate algorithm for the specific goal typically is based on experiments, comparing the performance of a number of candidate recommenders. Comparing the performance of an algorithm is mostly performed by using some evaluation metric, which usually uses numeric scores, that provides ranking of the compared algorithms. \\
+For measuring the accuracy of predictions of the algorithm three classes of measurements are defined, which are \cite{Gunawardana2022547}:
+\begin{itemize}
+\item \textbf{Measuring Ratings Prediction Accuracy} wishes to measure the accuracy of the system's predicted ratings. The following metrics can be used in such situation: Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), Normalized MRSE, Normalized MAE, Average RMSE, Average MAE.
+\item \textbf{Measuring Usage Prediction} tries to recommend to users items that they may use, with the following metrics: Precision, Recall (True Positive Rate), False Positive Rate (1 - Specificity), F-measure, Area Under the ROC Curve (AUC).
+\item \textbf{Ranking Measures} is not predicting an explicit rating, but rather is ordering itmes according to the user's preferences. This can be done Using a Reference Ranking like Normalized Distance based Performance Measure (NDPM), Average Precision (AP) correlation, Spearman's rank correlation coefficient, Kendall's rank correlation coefficient or using Utility-Based Ranking such as Normalized Discounted Cumulative Gain (NDCG), Discounted Cumulative Gain (DCG) or Average Reciprocal Hit Rank (ARHR). Other than that there is also Online Evaluation of Ranking.
+\end{itemize}
+%
+%
+%
+However, not all users are trying to use the recommendation engine just for the most accurate predictions, but they might be more interested in other properties of the recommender system like \cite{Gunawardana2022547}:
+\begin{multicols}{3}
+\begin{itemize}
+\item Coverage
+\item Confidence
+\item Trust
+\item Novelty
+\item Serendipity
+\item Diversity
+\item Utility
+\item Risk
+\item Robustness
+\item Privacy
+\item Adaptability
+\item Scalability
+\end{itemize}
+\end{multicols}
+%
+%
 %
 In the domain of scientific publications, where users are relatively few with respect to the available documents, information needs and interests easily change in an unpredictable way over time due to evolving professional needs, there is no advertising pushing new items, and the long tail of infrequently read articles may contain the so-called sleeping beauties, that are documents containing extremely relevant results, but that remain unknown to most researchers for a very long time. \\
 The Content-based approach does not require particular assumptions over the size and the activity of the user base. It does not penalize items that have less ratings or are less frequently consumed by many users as long as enough metadata are available, which even allows detailed explanations. These advantages over Collaborative Filtering techniques make this approach particularly attractive to the purpose of providing recommendation in the domain of scientific publications \cite{De_Nart201484}. \\
@@ -459,29 +498,39 @@ A study shows that more than half of the recommendation approaches applied Conte
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\section{Specification of requirements}
+\section{Implementation Proposal}
 
-\subsection{Performance - measures - Metrics}
-- recall rate\\
-- root mean square error\\
-- precision\\
-- cumulative gain ?\\
-- accuracy\\
-- overall efficacy\\
-- f1 - measure\\
-- Normalized Discounted Cumulative Gain (NDCG)\\
-- ...\\
 
 
 
 \clearpage{}
 \section{Implementation}
+
 \subsection{Dataset}
+
+\subsection{Experiments}
+\cite{Gunawardana2022547}
+%
+\begin{itemize}
+\item Offline Experiments - performed by using a pre-collected data set of users choosing or rating items
+\item User Studies - real user interaction with the system is collected, questions are asked (how relevant were the recommendations …)
+\item Online Evaluation - the system is used by real users that perform real tasks. It is most trustworthy to compare a few systems online, obtaining a ranking of alternatives, rather than absolute numbers that are more difficult to interpret.
+\end{itemize}
+
+\subsection{Testing}
+\cite{Gunawardana2022547}
+%
+\begin{itemize}
+\item Confidence and p-values
+\item Paired Results - sign test, McNemar's test, paired Student's t-test, Wilcoxon signed rank test
+\item Unpaired Results - Mann-Whitney test
+\item Multiple Tests - ANOVA, Friedman test for ranking
+\item Confidence Intervals - Gaussian distribution, mean, standard dev
+\end{itemize}
+
 
 
 \clearpage{}
