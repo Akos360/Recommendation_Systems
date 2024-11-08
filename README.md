@@ -1,4 +1,4 @@
-# Evaluating Recommender Systems for Digital Library Datasets
+# Evaluating Recommender Systems<br>for Digital Library Datasets
 ## Introduction
 This project is part of my Bachelor's thesis and focuses on developing an AI-based recommendation system. The system aims to provide personalized recommendations to users based on their preferences and behavior.
 
