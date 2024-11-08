@@ -20,6 +20,7 @@
 \usepackage{hyperref}
 \usepackage[a4paper, top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 \usepackage[parfill]{parskip}
+\usepackage{glossaries}
 
 \usepackage{lipsum}
 
@@ -28,6 +29,7 @@
 \setstretch{\mySpacing}
 \setcounter{tocdepth}{3}
 
+\makeglossaries
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
@@ -183,10 +185,23 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newacronym{ai}{AI}{Artificial Intelligence}
+%\newacronym{ml}{ML}{Machine Learning}
+
 \newpage{}
 \listoffigures
 \listoftables
-\section*{List of Abbreviations}
+\printglossary[type=\acronymtype, title=List of Abbreviations]
+
+
+
+
+
+
+
+%\section*{List of Abbreviations}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \hspace{1.3em}
 
@@ -195,6 +210,9 @@ Vedúci diplomového projektu: PaedDr. Pavol Baťalík
 \setcounter{page}{1}
 
 \section{Introduction}
+%artificial \gls{ai}\\
+%machine \gls{ml}\\
+
 As Internet and Web technologies continue to evolve rapidly, the amount of information available online has expanded excessively across sections such as e-commerce, e-government or e-learning. To help users navigate this vast sea of content, Recommender Systems (RS) have become fundamental. These systems are not designed just for saving time for users, but they are enhancing the users experience when using the said system, by anticipating their needs and relevant items or topics to discover. They are very effective tools for filtering out the most appropriate information any user would like to find. The primary focus of these recommendations is to predict if a specific user will be interested in the distinct items.\\
 %
 “Item” is the general term used to denote what the system recommends to users. A RS normally focuses on a specific type of item (e.g., movies, books or news) and accordingly its design, its graphical user interface, and the core recommendation technique used to generate the recommendations are all customized to provide useful and effective suggestions for that specific type of item. \cite{pub.1036183961}\\
@@ -499,15 +517,104 @@ A study shows that more than half of the recommendation approaches applied Conte
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%\item 
+%\item 
+%\end{itemize}
+
 
 \clearpage
 \section{Implementation Proposal}
+5-10 Pages \\\\
+\begin{itemize}
+\item system-centric evaluation
+	\begin{itemize}
+	\item algorithmic aspects - e.g., the predictive accuracy of recommendation algorithms
+	\end{itemize}
+
+\item user-centric evaluation
+	\begin{itemize}
+	\item users' perspective - how users perceive its quality or the user experience when interacting with the RS
+	\end{itemize}
+
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{3cm}|p{10cm}}
+\hline
+\textbf{Type} & \textbf{Description} \\
+\hline
+Offline & Method: simulation of user behavior based on past interactions \\
+        & Task: defined by the researcher, purely algorithmic \\
+        & Repeatability: evaluation of an arbitrary number of experiments possible at low cost \\
+        & Scale: large dataset, large number of users \\
+        & Insights: quantitative, narrow \\
+\hline
+User Study & Method: user observation in live or laboratory setting \\
+           & Task: defined by the researcher, carried out by the user \\
+           & Repeatability: expensive \\
+           & Scale: small cohort of users \\
+           & Insights: quantitative and/or qualitative \\
+\hline
+Online & Method: real-world user observation, online field experiment \\
+       & Task: self-selected by the user, carried out by the user \\
+       & Repeatability: expensive \\
+       & Scale: large \\
+       & Insights: quantitative and/or qualitative \\
+\hline
+\end{tabular}
+\caption{Overview of Experiment Types \cite{Zangerle2023}}
+\end{table}
+%
+%
+Offline evaluations are the most popular experiment type. \cite{Zangerle2023}\\
+%
+%
+Choices:
+\begin{itemize}
+\item different datasets
+\item different evaluation goals
+\item different metrics to compare
+\end{itemize}
+%
+%
+%
+FEVR ~\ref{fig:evaluation}.
+\begin{itemize}
+\item Evaluation Objectives
+\item Evaluation Principles
+\item Experiment Type
+\item Evaluation Aspects
+\end{itemize}
+%
+Evaluation Objectives
+%
+\begin{itemize}
+\item Overall Goal - importance to define the evaluation goal as precisely as possible
+\item Stakeholders - varying goals and potentially conflicting interests\\
+Currently, academic RS research tends to take the perspective of the end consumer
+\item Properties - improving specific properties where they fall short \\
+The challenge is to identify the properties that are indeed relevant for a recommender’s performance and show that it affects the users’ experience, or the interests of other stakeholders. 
+\end{itemize}
+%
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/evaluation_figure.png}
+    \caption{Evaluation of Recommender Systems: objectives and design space \cite{Zangerle2023}}
+    \label{fig:evaluation}
+\end{figure}
+
+
+
+
 
 
 
 
 \clearpage{}
 \section{Implementation}
+5 Pages\\\\
 
 \subsection{Dataset}
 
@@ -530,11 +637,13 @@ A study shows that more than half of the recommendation approaches applied Conte
 \item Multiple Tests - ANOVA, Friedman test for ranking
 \item Confidence Intervals - Gaussian distribution, mean, standard dev
 \end{itemize}
-
-
+%
+UP NEXT\\
+EVALUATION PRINCIPLES\\
 
 \clearpage{}
 \section{Conclusion}
+3-4 Pages\\\\
 
 
 \clearpage
