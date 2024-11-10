@@ -1,3 +1,15 @@
+EVALUATION
+
+10.1109/ICDIM.2012.6360092
+Evaluating recommender systems
+
+10.1016/j.eswa.2007.07.047
+Evaluation of recommender systems: A new approach
+
+10.1007/s13042-017-0762-9
+How good your recommender system is? A survey on evaluations in recommendation
+
+
 REFERENCED
 ===========================================
 
