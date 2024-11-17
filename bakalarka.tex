@@ -479,9 +479,9 @@ When trying to choose which recommendation approach is the best, first it is imp
 The process of finding the most appropriate algorithm for the specific goal typically is based on experiments, comparing the performance of a number of candidate recommenders. Comparing the performance of an algorithm is mostly performed by using some evaluation metric, which usually uses numeric scores, that provides ranking of the compared algorithms. \\
 For measuring the accuracy of predictions of the algorithm three classes of measurements are defined, which are \cite{Gunawardana2022547}:
 \begin{itemize}
-\item \textbf{Measuring Ratings Prediction Accuracy} wishes to measure the accuracy of the system's predicted ratings. The following metrics can be used in such situation: Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), Normalized MRSE, Normalized MAE, Average RMSE, Average MAE.
+\item \textbf{Measuring Ratings Prediction Accuracy} wishes to measure the accuracy of the system's predicted ratings. The following metrics can be used in such situation: Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), Normalized RMSE, Normalized MAE, Average RMSE, Average MAE.
 \item \textbf{Measuring Usage Prediction} tries to recommend to users items that they may use, with the following metrics: Precision, Recall (True Positive Rate), False Positive Rate (1 - Specificity), F-measure, Area Under the ROC Curve (AUC).
-\item \textbf{Ranking Measures} is not predicting an explicit rating, but rather is ordering itmes according to the user's preferences. This can be done Using a Reference Ranking like Normalized Distance based Performance Measure (NDPM), Average Precision (AP) correlation, Spearman's rank correlation coefficient, Kendall's rank correlation coefficient or using Utility-Based Ranking such as Normalized Discounted Cumulative Gain (NDCG), Discounted Cumulative Gain (DCG) or Average Reciprocal Hit Rank (ARHR). Other than that there is also Online Evaluation of Ranking.
+\item \textbf{Ranking Measures} is not predicting an explicit rating, but rather is ordering items according to the user's preferences. This can be done Using a Reference Ranking like Normalized Distance based Performance Measure (NDPM), Average Precision (AP) correlation, Spearman's rank correlation coefficient, Kendall's rank correlation coefficient or using Utility-Based Ranking such as Normalized Discounted Cumulative Gain (NDCG), Discounted Cumulative Gain (DCG) or Average Reciprocal Hit Rank (ARHR). Other than that there is also Online Evaluation of Ranking.
 \end{itemize}
 %
 %
@@ -528,14 +528,14 @@ A study shows that more than half of the recommendation approaches applied Conte
 % 5-10 Pages \\\\
 When evaluating a RS there are two main types of evaluation, which are:
 \begin{itemize}
-\item system-centric evaluation
+\item System-Centric Evaluation
 	\begin{itemize}
-	\item algorithmic aspects - e.g., the predictive accuracy of recommendation algorithms
+	\item Algorithmic Aspects - e.g., the predictive accuracy of recommendation algorithms
 	\end{itemize}
 
-\item user-centric evaluation
+\item User-Centric Evaluation
 	\begin{itemize}
-	\item users' perspective - how users perceive its quality or the user experience when interacting with the RS
+	\item Users' Perspective - how users perceive its quality or the user experience when interacting with the RS
 	\end{itemize}
 
 \end{itemize}
@@ -675,16 +675,28 @@ Evaluation Metrics & Prediction accuracy with RMSE; intra-list similarity in ter
 Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
 \end{tabular}
 \end{table}
+%
+%
+
+
+\clearpage
+\textbf{METRICS TO USE}:
+\begin{itemize}
+\item Relevance - Feature Similarity
+
+\item Accuracy -> NEEDS RATINGS
+\item Usage Prediction -> NEEDS IMPLICIT FEEDBACK (clicks, downloads...)
+
+\item Ranking Measure
+\item Diversity
+\item Novelty - maybe (Serendipity is almost the same)
+\item Confidence\\\\
+\end{itemize}
 
 
 
-
-
-
-
-
-
-
+\textbf{TASK 1:} Recommend books (list of books) based on 1 book (opened book)\\\\
+\textbf{TASK 2:} Recommend books (list of books) based on users query (the querys meaning - content) (not like a search engine)\\
 
 
 
