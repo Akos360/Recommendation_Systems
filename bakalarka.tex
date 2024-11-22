@@ -21,6 +21,9 @@
 \usepackage[a4paper, top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
 \usepackage[parfill]{parskip}
 \usepackage{glossaries}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc}
 
 \usepackage{lipsum}
 
@@ -220,7 +223,7 @@ As Internet and Web technologies continue to evolve rapidly, the amount of infor
 The basic principle of recommendations is that significant dependencies exist between user- and item-centric activity. 
 For example, a user who is interested in a historical documentary is more likely to be interested in another historical documentary or an educational program, rather than in an action movie. \cite{pub.1022525812}\\\\
 %
-The main target of this project is to create a recommendation system that uses ............. (text, materials).\\\\\\
+The main target of this project is to create a recommendation system that uses different algorithms for book recommendations and evaluate these algorithms based on specified metrics.\\
 
 
 
@@ -230,7 +233,7 @@ The main target of this project is to create a recommendation system that uses .
 \clearpage{}
 \section{Understanding Recommendation Systems}
 Making decisions is not always easy. People are frequently presented with an overwhelming number of options when picking a product, a movie, or a destination to travel to, and each option comes with different levels of information and trustworthiness. \\
-While there are many situations in which users know exactly what they are looking for and would like immediate answers, in other cases they are willing to explore and extend their knowledge \cite{Blanco201333}.\\
+While there are many situations in which users know exactly what they are looking for and would like immediate answers, in other cases they are willing to explore and extend their knowledge \cite{Blanco201333}.\\\\
 The main purpose of \textbf{Recommendation Systems} is to predict useful items, select some of them and after comparing them, the system recommends the most accurate ones.\\ 
 These Personalized recommendation systems are emerging as appropriate tools to aid and speed up the process of information seeking, considering the dramatic increase in big data \cite{Haruna2017}. They need to handle a large amount of textual data in order to accurately understand users’ reading preferences and generate corresponding recommendations \cite{Yan2024}. \\
 %
@@ -247,9 +250,38 @@ The task to provide users with currently available options for products that fit
 %
 When someone is trying to find a movie to watch, it would be hard for them to start searching without any starting options. After all a blank page and no suggestions to choose from might even make the user decide not to pick anything. \\\\
 %
-Recommending items can be done in a variety of ways. Several types of recommendation systems exist, and their methods of operation differ. These recommendation types can be divided into 3 main categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two. \\
-Other categories also include Knowledge-Based, Context-Aware, Popularity-Based, Demographic, Utility-Based and Deep Learning-Based Recommendation.\\\\
+\newpage{}
+Recommending items can be done in a variety of ways. Several types of recommendation systems exist, and their methods of operation differ. Here are the different recommendation systems:\\
+
+%These recommendation types can be divided into 3 main categories, which are Content-Based Filtering approaches (CB), Collaborative Filtering approaches (CF) and Hybrid approaches which are the combinations of the two. \\
+%Other categories also include Knowledge-Based, Context-Aware, Popularity-Based, Demographic, Utility-Based and Deep Learning-Based Recommendation.\\\\
 %
+
+{
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3} 
+{\Large
+\begin{tabular}{m{0.03\textwidth}|m{0.5\textwidth}}
+\hline
+\textbf{\# } & \textbf{Category} \\ \hline
+1. & Content-Based Filtering (CB) \\ \hline
+2. & Collaborative Filtering (CF) \\ \hline
+3. & Hybrid Approaches \\ \hline
+4. & Knowledge-Based \\ \hline
+5. & Context-Aware \\ \hline
+6. & Popularity-Based \\ \hline
+7. & Demographic \\ \hline
+8. & Utility-Based \\ \hline
+9. & Deep Learning-Based \\ \hline
+\end{tabular}
+}
+\caption{Types of Recommendation Systems}
+\label{table:recommendation-systems}
+\end{table}
+}
+
+
 %
 \textbf{Basic ideas of the recommendation techniques:}
 \begin{itemize}[label=--]
@@ -268,6 +300,7 @@ Other categories also include Knowledge-Based, Context-Aware, Popularity-Based, 
 %
 %
 %
+\newpage{}
 \subsection{Role of Recommendation Systems}
 The Recommendation System can have a range of roles to play. First it is important to distinguish on whose behalf the role is played, which can be either the service providers or the users side. For example, a recommendation system for music, implemented by a streaming service like Spotify wants to increase user engagement by recommending new playlists and songs, which leads to more subscriptions or advertisement revenue. While on the other hand the user wants to listen to personalized playlists and discover songs they might like.\\\\
 There are more ways why a service provider would want to utilize such technology:
@@ -276,23 +309,36 @@ There are more ways why a service provider would want to utilize such technology
 \item Sell more diverse items - not just to sell the most popular items, but also recommend items that might be hard to find. The popular items will probably be sold either way, on the other hand the service provider might want to sell every item.
 \item Increase user satisfaction - improve the experience for the user with effective recommendations and combine it with a usable interface, so the user will be more satisfied with the system.
 \item Increase user fidelity - make more personalized recommendations based on the users previous visits and interactions, by treating the user as a valuable customer.
-\item Better understand what the user wants - to describe the user's preferences which are explicitly collected or predicted by the system. The service provider can even use this knowledge for other goals like improve inventory management or target specific promotions. \cite{pub.1036183961}
+\item Better understand what the user wants - to describe the user's preferences which are explicitly collected or predicted by the system. The service provider can even use this knowledge for other goals like improve inventory management or target specific promotions. \cite{pub.1036183961}\\
 \end{itemize}
 %
-From the users point of view the recommendation system can help in implementing other core tasks which are normally associated with an RS. The popular tasks are the following \cite{Ricci20221}:
-\begin{itemize}[label=--]
-\item Find some good items
-\item Find all good items
-\item Annotate items in context (emphasize some items depending on user's preferences)
-\item Recommend a sequence
-\item Recommend a bundle
-\item Just browsing (without the intention of purchasing an item)
-\item Find credible recommender (test how good the system is at recommending)
-\item Improve the active users profile
-\item Express self (express opinions and help the system with ratings)
-\item Help others (evaluate items to help other users in finding their preferable items)
-\item Influence others (convince other users into buying particular products)
-\end{itemize}
+From the users point of view the recommendation system can help in implementing other core tasks which are normally associated with an RS. The popular tasks are the following \cite{Ricci20221}:\\
+
+\begin{table}[h!]
+\centering
+{
+\renewcommand{\arraystretch}{2}
+{\large
+\begin{tabular}{|m{0.03\textwidth}|m{0.3\textwidth}|m{0.6\textwidth}|}
+\hline
+\textbf{\#} & \textbf{Task} & \textbf{Description} \\ \hline
+1. & Find some good items & Identify a selection of quality items. \\ \hline
+2. & Find all good items & Locate all available items deemed good. \\ \hline
+3. & Annotate items in context & Emphasize items based on the user's preferences and context. \\ \hline
+4. & Recommend a sequence & Suggest an order for engaging with items. \\ \hline
+5. & Recommend a bundle & Propose a set of complementary items together. \\ \hline
+6. & Just browsing & Explore items without the intention of purchasing. \\ \hline
+7. & Find credible recommender & Evaluate how effective the system is at making recommendations. \\ \hline
+8. & Improve the active user's profile & Enhance the system's understanding of the user's preferences. \\ \hline
+9. & Express self & Share opinions and provide ratings to assist the system. \\ \hline
+10. & Help others & Evaluate items to guide others in finding what suits them. \\ \hline
+11. & Influence others & Persuade other users to consider particular products. \\ \hline
+\end{tabular}
+}
+}
+\caption{Recommendation System tasks}
+\label{table:rs-tasks}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -439,6 +485,7 @@ The \textbf{Path-based} method focuses on enhancing the connections called meta-
 %
 
 
+
 \subsubsection{Hybrid Approaches}
 The Hybrid recommender systems try to combine two or more recommendation techniques to get to better performance and accuracy. The most common approach is to have a collaborative filtering technique combined with some other technique to try to avoid the ramp-up problem.
 The ramp-up problem actually means two problems, which are "New User" and "New Item" problems (hard to categorize with few ratings).\\
@@ -539,8 +586,14 @@ When evaluating a RS there are two main types of evaluation, which are:
 	\end{itemize}
 
 \end{itemize}
-
+%
+%
+\textbf{TASK:} Recommend books (list of books) based on 1 book (opened book)
+%
+%
 \subsection{Experiment Types}
+{
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[h!]
 \centering
 \begin{tabular}{p{3cm}|p{10cm}}
@@ -566,8 +619,10 @@ Online & Method: real-world user observation, online field experiment \\
        & Insights: quantitative and/or qualitative \\
 \hline
 \end{tabular}
+
 \caption{Overview of Experiment Types \cite{Zangerle2023}}
 \end{table}
+}
 %
 %
 \textbf{Offline evaluations} are the most popular experiment type. They aim to compare different recommendation algorithms and settings; they do not require any user interaction and may be considered
@@ -680,13 +735,44 @@ Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
 
 
 \clearpage
-\textbf{METRICS TO USE}:
+\subsection{Used Algorithms for Feature Extraction:}
+\begin{enumerate}
+\item TF-IDF
+\item LSA
+\item Word2Vec
+\item Doc2Vec
+\item BERT
+\item BoW
+\item BM25
+\item LDA
+\item FastText
+\item GloVe
+\end{enumerate}
+%
+%
+%
+\subsection{Used Similarity and Distance Measures:}
+\begin{enumerate}
+\item Cosine Similarity
+\item Euclidean Distance
+\item Jaccard Similarity
+\item Manhattan Distance
+\item Pearson Correlation
+\item Bray-Curtis Distance
+\item Canberra Distance
+\item Minkowski Distance
+\item Mahalanobis Distance
+\item Wasserstein Distance
+\end{enumerate}
+
+
+
+\subsection{Used Metrics for evaluation:}
 \begin{itemize}
 \item Relevance - Feature Similarity - define treshold
 
-\item Accuracy -> NEEDS RATINGS
-\item Usage Prediction -> NEEDS IMPLICIT FEEDBACK (clicks, downloads...)
-
+\item Usage Prediction - IMPLICIT FEEDBACK (clicks, downloads...)
+\item Coverage
 \item Ranking Measure
 \item Diversity
 \item Novelty - maybe (Serendipity is almost the same)
@@ -695,8 +781,8 @@ Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
 
 
 
-\textbf{TASK 1:} Recommend books (list of books) based on 1 book (opened book)\\\\
-\textbf{TASK 2:} Recommend books (list of books) based on users query (the querys meaning - content) (not like a search engine)\\
+
+
 
 
 
