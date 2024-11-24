@@ -362,9 +362,18 @@ Memory-based collaborative filtering, which can also be called Neighborhood-base
 	\end{itemize}
 \item Item-Based Collaborative Filtering
 	\begin{itemize}
-	\item Calculates similarity between items, rather than users. The user will probably like a new item which is similar to another item they were interested in before.
+	\item Calculates similarity between items, rather than users. The user will probably like a new item which is similar to another item they were interested in before.\\
 	\end{itemize}
 \end{itemize}
+%
+%
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/collaborative_example.png}
+    \caption{Illustration of Memory-based CF recommendation}
+    \label{fig:collaborative_example}
+\end{figure}
+%
 %
 When trying to implement this type of recommendation system it is important to consider the key components, which are: 
 \begin{itemize}
@@ -476,10 +485,18 @@ The idea is that attributes of users and items are not isolated but linked up wi
 %
 Basically a knowledge graph is a directed graph whose nodes are the entities and the edges are the relations between them. They are usually defined as triplets with a head entity, tail entity and a relationship connecting them. The graphs have detailed supporting information which is background knowledge of items and their relations amongst them. The facts of items are organized in those triplets like (Ed Sheeran, IsSingerOf, Shape of You), which can be seamlessly integrated with user-item interactions. This interaction data is usually presented as a
 bipartite graph \cite{pub.1120733877}. \\
-The crucial point to leverage knowledge graphs to perform item recommendations is to be able to effectively model user-item relatedness from this rich heterogeneous network \cite{Palumbo201732}. \\\\ 
+The crucial point to leverage knowledge graphs to perform item recommendations is to be able to effectively model user-item relatedness from this rich heterogeneous network \cite{Palumbo201732}. \\ 
 %
 %
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{img/knowledge_graph_example.png}
+    \caption{Illustration of KG-aware recommendation}
+    \label{fig:knowledge_graph_example}
+\end{figure}
 %
+%
+\newpage{}
 Recommendation methods based on knowledge graphs can be practically categorized into two different types which are Path-based and Embedding-based methods. Where the \textbf{Embedding-based} method uses knowledge graph embedding (KGE) techniques trying to learn how to represent users and items. This method uses representation learning to find connections implicitly, rather than using user preferences. Models such as TransE, TransR and TransH build entity and relation embeddings by regarding a relation as translation from head entity to tail entity. These models simply put both entities and relations within the same semantic space. \cite{pub.1148917041}\\
 The \textbf{Path-based} method focuses on enhancing the connections called meta-paths that link the users and items, showing how similar they are \cite{Yang20229308}. \\
 %
@@ -573,7 +590,58 @@ A study shows that more than half of the recommendation approaches applied Conte
 \clearpage
 \section{Implementation Proposal}
 % 5-10 Pages \\\\
-When evaluating a RS there are two main types of evaluation, which are:
+%
+The purpose of this proposal is to evaluate various content-based algorithms for recommending books based on textual metadata and full-text features.\\\\
+%
+\textbf{Task:} Recommend books (list of books) based on 1 input book (opened book).\\
+\textbf{Objectives:} 
+\begin{itemize}
+\item Implement and test multiple algorithms
+\item Compare effectiveness of algorithms using evaluation metrics\\
+\end{itemize}
+%
+%
+\subsection{Hypotheses}
+\textbf{Hypothesis 1:}\\
+\textbf{Hypothesis 2:}\\
+\textbf{Hypothesis 3:}\\\\
+%
+%
+%
+\subsection{Feature Extraction Algorithms for Comparison:}
+\begin{enumerate}
+\item TF-IDF
+\item LSA
+\item Word2Vec
+\item Doc2Vec
+\item BERT
+\item BoW
+\item BM25
+\item LDA
+\item FastText
+\item GloVe
+\end{enumerate}
+%
+%
+%
+\subsection{Similarity and Distance Measures:}
+\begin{enumerate}
+\item Cosine Similarity
+\item Euclidean Distance
+\item Jaccard Similarity
+\item Manhattan Distance
+\item Pearson Correlation
+\item Bray-Curtis Distance
+\item Canberra Distance
+\item Minkowski Distance
+\item Mahalanobis Distance
+\item Wasserstein Distance
+\end{enumerate}
+%
+%
+%
+\subsection{Evaluation}
+When \textbf{Evaluating} a RS there are two main types of evaluation, which are:
 \begin{itemize}
 \item System-Centric Evaluation
 	\begin{itemize}
@@ -588,10 +656,21 @@ When evaluating a RS there are two main types of evaluation, which are:
 \end{itemize}
 %
 %
-\textbf{TASK:} Recommend books (list of books) based on 1 book (opened book)
+\subsubsection{Used Metrics for evaluation:}
+\begin{itemize}
+\item Relevance - Feature Similarity - define treshold
+
+\item Usage Prediction - IMPLICIT FEEDBACK (clicks, downloads...)
+\item Coverage
+\item Ranking Measure
+\item Diversity
+\item Novelty - maybe (Serendipity is almost the same)
+\item Confidence\\\\
+\end{itemize}
 %
 %
 \subsection{Experiment Types}
+Experimenting with recommendations can be done in different ways. Here are the types of experiments to test the algorithms:
 {
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[h!]
@@ -621,20 +700,12 @@ Online & Method: real-world user observation, online field experiment \\
 \end{tabular}
 
 \caption{Overview of Experiment Types \cite{Zangerle2023}}
-\end{table}
+\end{table}\\
 }
 %
 %
-\textbf{Offline evaluations} are the most popular experiment type. They aim to compare different recommendation algorithms and settings; they do not require any user interaction and may be considered
-system-centric.  \cite{Zangerle2023}\\\\
+\textbf{Offline evaluations} are the most popular experiment type. They aim to compare different recommendation algorithms and settings; they do not require any user interaction and may be considered system-centric.  \cite{Zangerle2023}\\\\
 %
-%
-Choices:
-\begin{itemize}
-\item different datasets
-\item different evaluation goals
-\item different metrics to compare
-\end{itemize}
 %
 %
 %
@@ -705,79 +776,36 @@ the evaluation setup as the hypothesis (in line with the evaluation objectives) 
 %
 %
 %
-\begin{table}[h!]
-\centering
-\caption{FEVR: Overview of Example Evaluation}
-\begin{tabular}{lp{10cm}}
-\hline
-\textbf{FEVR Component} & \textbf{Brief Description} \\ \hline
-\multicolumn{2}{|l|}{\textbf{Evaluation Objectives}} \\ \hline
-Overall Goal & To evaluate whether users are able to find likable music in the recommendations computed by the novel RecAlg algorithm \\ \hline
-Stakeholders & Users of the system (algorithm) \newline Artists may also benefit from an increased item diversity as a more diverse set of artists may be represented \\ \hline
-Properties & Item diversity in the recommendations; catalog coverage \\ \hline
-\multicolumn{2}{|l|}{\textbf{Evaluation Principles}} \\ \hline
-Hypothesis/Research Question & \( H_1 \): RecAlg provides users (on average) with more diverse recommendations with respect to the intra-list diversity while maintaining prediction accuracy compared to the baseline algorithm. \\ \hline
-Control Variables & Follow accountability framework by Bellogín and Said \cite{24} (for randomization in dataset splitting to prevent selection bias) \\ \hline
-Generalization Power & Limited due to lack of user involvement and dataset biases \\ \hline
-Reliability & Follow accountability framework by Bellogín and Said \cite{24} \\ \hline
-\multicolumn{2}{|l|}{\textbf{Experiment Type}} \\ \hline
-Experiment Type & Offline Evaluation with A/B-testing \\ \hline
-\multicolumn{2}{|l|}{\textbf{Evaluation Aspects}} \\ \hline
-Types of Data & Implicit ratings (listening events), side information for music tracks \\ \hline
-Data Collection & LFM-2b dataset \cite{194} \\ \hline
-Data Quality and Biases & Platform bias, popularity bias, skewed gender distribution, imbalanced country distribution \\ \hline
-Evaluation Metrics & Prediction accuracy with RMSE; intra-list similarity in terms of different unique artists \\ \hline
-Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
-\end{tabular}
-\end{table}
+%\begin{table}[h!]
+%\centering
+%\caption{FEVR: Overview of Example Evaluation}
+%\begin{tabular}{lp{10cm}}
+%\hline
+%\textbf{FEVR Component} & \textbf{Brief Description} \\ \hline
+%\multicolumn{2}{|l|}{\textbf{Evaluation Objectives}} \\ \hline
+%Overall Goal & To evaluate whether users are able to find likable music in the recommendations computed by the novel RecAlg algorithm \\ \hline
+%Stakeholders & Users of the system (algorithm) \newline Artists may also benefit from an increased item diversity as a more diverse set of artists may be represented \\ \hline
+%Properties & Item diversity in the recommendations; catalog coverage \\ \hline
+%\multicolumn{2}{|l|}{\textbf{Evaluation Principles}} \\ \hline
+%Hypothesis/Research Question & \( H_1 \): RecAlg provides users (on average) with more diverse recommendations with respect to the intra-list diversity while maintaining prediction accuracy compared to the baseline algorithm. \\ \hline
+%Control Variables & Follow accountability framework by Bellogín and Said \cite{24} (for randomization in dataset splitting to prevent selection bias) \\ \hline
+%Generalization Power & Limited due to lack of user involvement and dataset biases \\ \hline
+%Reliability & Follow accountability framework by Bellogín and Said \cite{24} \\ \hline
+%\multicolumn{2}{|l|}{\textbf{Experiment Type}} \\ \hline
+%Experiment Type & Offline Evaluation with A/B-testing \\ \hline
+%\multicolumn{2}{|l|}{\textbf{Evaluation Aspects}} \\ \hline
+%Types of Data & Implicit ratings (listening events), side information for music tracks \\ \hline
+%Data Collection & LFM-2b dataset \cite{194} \\ \hline
+%Data Quality and Biases & Platform bias, popularity bias, skewed gender distribution, imbalanced country distribution \\ \hline
+%Evaluation Metrics & Prediction accuracy with RMSE; intra-list similarity in terms of different unique artists \\ \hline
+%Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
+%\end{tabular}
+%\end{table}
 %
 %
 
 
-\clearpage
-\subsection{Used Algorithms for Feature Extraction:}
-\begin{enumerate}
-\item TF-IDF
-\item LSA
-\item Word2Vec
-\item Doc2Vec
-\item BERT
-\item BoW
-\item BM25
-\item LDA
-\item FastText
-\item GloVe
-\end{enumerate}
-%
-%
-%
-\subsection{Used Similarity and Distance Measures:}
-\begin{enumerate}
-\item Cosine Similarity
-\item Euclidean Distance
-\item Jaccard Similarity
-\item Manhattan Distance
-\item Pearson Correlation
-\item Bray-Curtis Distance
-\item Canberra Distance
-\item Minkowski Distance
-\item Mahalanobis Distance
-\item Wasserstein Distance
-\end{enumerate}
 
-
-
-\subsection{Used Metrics for evaluation:}
-\begin{itemize}
-\item Relevance - Feature Similarity - define treshold
-
-\item Usage Prediction - IMPLICIT FEEDBACK (clicks, downloads...)
-\item Coverage
-\item Ranking Measure
-\item Diversity
-\item Novelty - maybe (Serendipity is almost the same)
-\item Confidence\\\\
-\end{itemize}
 
 
 
@@ -802,7 +830,8 @@ Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
 
 \clearpage{}
 \section{Implementation}
-5 Pages\\\\
+5 Pages\\
+Jupyter Notebook\\\\
 
 \subsection{Dataset}
 
