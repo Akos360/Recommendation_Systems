@@ -19,4 +19,4 @@ Map the currently used web recommendation systems and algorithms. Also, explore 
 - Semantics
 - Knowledge based systems
 
-![Recommentadion_system](img/recommendation.jpg)
+![Recommentadion_system](readme_img/recommendation.jpg)

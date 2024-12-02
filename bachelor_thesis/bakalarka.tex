@@ -590,58 +590,133 @@ A study shows that more than half of the recommendation approaches applied Conte
 \clearpage
 \section{Implementation Proposal}
 % 5-10 Pages \\\\
-%
-The purpose of this proposal is to evaluate various content-based algorithms for recommending books based on textual metadata and full-text features.\\\\
-%
-\textbf{Task:} Recommend books (list of books) based on 1 input book (opened book).\\
+Drawing from the theoretical foundation in the second section, this section proposes a practical framework for evaluating different Content-Based Filtering algorithms tested on recommending books from digital library datasets based on textual metadata and full-text features.\\ 
+The \textbf{Task} is to recommend Top N books (list of books) based on 1 input book (opened book).\\\\
 \textbf{Objectives:} 
 \begin{itemize}
 \item Implement and test multiple algorithms
-\item Compare effectiveness of algorithms using evaluation metrics\\
+\item Compare performance of algorithms using evaluation metrics
 \end{itemize}
 %
 %
 \subsection{Hypotheses}
-\textbf{Hypothesis 1:}\\
-\textbf{Hypothesis 2:}\\
-\textbf{Hypothesis 3:}\\\\
+A hypothesis is a specific description or prediction to define the evaluation's goal. It serves as the foundation for experiments showing the direction for testing and analyzing the results. The more precise the hypothesis, the clearer the setup of the evaluation.\\\\
+\textbf{Hypothesis 1:} Algorithms with contextual embeddings (BERT, FastText) will achieve higher \textbf{Usage Prediction} scores than simpler frequency-based methods (TF-IDF, BM25).\\
+%
+\textbf{Hypothesis 2:} Probabilistic models (LDA) will have higher \textbf{Coverage} compared to neural embedding techniques (Word2Vec, BERT), as they can better generalize relationships across sparse datasets.\\
+%
+\textbf{Hypothesis 3:} Transformer-based algorithms (BERT) will outperform other methods on \textbf{Ranking Measures} like NDCG because they leverage bidirectional encoding to better understand query-item relevance.\\
+%
+\textbf{Hypothesis 4:} Word2Vec and FastText will generate more \textbf{Diverse} recommendations than probabilistic or frequency-based methods, as their embeddings capture subtler relationships between less frequently co-occurring terms.\\
+%
+\textbf{Hypothesis 5:} GloVe and LSA will recommend items with higher \textbf{Novelty} scores compared to algorithms like BM25 or TF-IDF, as they infer latent relationships beyond direct term matches.\\
+%
+\textbf{Hypothesis 6:} BERT and Word2Vec will provide the highest \textbf{Confidence} in recommendations, as their embeddings are more precise and context-aware, resulting in smaller prediction uncertainty.\\
 %
 %
 %
-\subsection{Feature Extraction Algorithms for Comparison:}
+%
+%
+%
+\subsection{Descriptions of the Algorithms for Comparison:}
+In the context of academic book recommendations, a variety of content-based algorithms can be used to extract meaningful patterns and relationships from textual data. These algorithms differ in their approach to representing and analyzing documents, ranging from simple term frequency models to advanced neural network-based techniques. Below is an overview of the algorithms, highlighting their methodology and key characteristics:
 \begin{enumerate}
-\item TF-IDF
-\item LSA
-\item Word2Vec
-\item Doc2Vec
-\item BERT
-\item BoW
-\item BM25
-\item LDA
-\item FastText
-\item GloVe
+\item \textbf{TF-IDF (Term Frequency - Inverse Document Frequency)}\\
+Creates two matrices that are interrelated, trying to figure out the relevancy of a given term (word) to a document given a larger body of documents.
+TF means how often a given word occurs in the given document, because words that occur frequently are probably more important.
+DF means how often the given word occurs in an entire set of documents, but this does not have to mean the word is important, it just shows common words that appear everywhere. So using Inverse DF shows how often the word appears in a document, over how often it appears everywhere.
+
+\item \textbf{BoW (Bag of Words)}\\
+Creates a set of vectors containing the count of word occurrences in the document. Unlike TF-IDF, BoW just counts the occurrences of unique words and puts them in its vocabulary so each word becomes a feature or dimension. Each document is represented as a vector based on the frequency of words from the vocabulary. The term-document matrix represents the documents as rows and the unique words as columns with cells showing frequency.
+ 
+\item \textbf{GloVe (Global Vectors for Word Representation)}\\
+Is a word embedding model that builds a co-occurrence matrix where rows represent the words, columns represent the context words and each cell contains the frequency with which the word and context word co-occur within a specified window. The matrix is factorized to learn word embeddings. After training GloVe produces embeddings for all words in the vocabulary.
+
+\item \textbf{LSA (Latent Semantic Analysis)}\\
+Is a model for extracting and representing the contextual-usage meaning of words by statistical computations applied to a large corpus of documents. It uses Singular Value Decomposition (SVD) and Rank lowering (Dimensionality reduction). The SVD splits the Matrix of document by keyword into three matrices, which are topic by keyword, document by topic and the diagonal matrix.
+
+\item \textbf{LDA (Latent Dirichlet Allocation)}\\
+Is a generative model for document collections, unlike LSA, LDA is a probabilistic Topic Model, which decomposes a conditional term by the document porbability distribution into two different distributions, the term by topic distribution and the topic by document distribution. After running LDA, each document is represented as a topic distribution, i.e., a vector of probabilities indicating the degree to which each topic is present in the document. \cite{Bergamaschi2015247}
+
+\item \textbf{Word2Vec}\\
+Is a neural network-based algorithm that generates dense vector representations for words (embeddings). The neural network uses one hidden layer to create the embeddings, it comes in two main architectures. Using Continuous Bag of Words (CBoW) which predicts a target word based on the words around it, or using Skip-Gram which predicts the context words given a target word. The output is a vector for each word in the vocabulary.
+
+\item \textbf{Doc2Vec}\\
+Is an extension of Word2Vec also being a neural network-based algorithm, but is designed to generate dense vector representations for entire documents or sentences, not just words. It enhances the Word2Vec by adding a document vector, which represents the unique context of an entire document. Here are also two main architectures, the first is the Distributed Memory Model of Paragraph Vectors (PV-DM) which predicts a word within a context using the surrounding words and a document vector, and the second is the Distributed Bag of Words (PV-DBOW) which instead of predicting a word using context, it predicts context words using the document vector alone. For output each document is represented by a fixed-length dense vector, regardless of its size or content.
+
+\item \textbf{BERT (Bidirectional Encoder Representations from Transformers)}\\
+Is a transformer-based deep learning model that generates contextualized word and sentence embeddings. BERT uses attention mechanisms to model relationships between all words in a sentence allowing bidirectional encoding. Unlike Word2Vec, BERT generates dynamic embeddings that take into account the specific context of a word or a sentence. This model can be Pretrained and Fine-Tuned for specific tasks.
+
+\item \textbf{FastText}\\
+Extends Word2Vec by incorporating subword information, so FastText breaks words into character n-grams and learns embeddings for these subwords. It can handle words that are out of the vocabulary, because it models character n-grams and not words. For output it produces dense, fixed-length word vectors that have the additional subword information.
+
+\item \textbf{BM25 (Best Match 25)}\\
+Is a ranking function that builds on the TF-IDF model. It ranks a set of documents based on the query terms appearing in each document, not considering their proximity within the document.
 \end{enumerate}
 %
 %
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{2}
+{\large
+\begin{tabular}{|m{0.03\textwidth}|m{0.5\textwidth}|}
+\hline
+\textbf{\#} & \textbf{Feature Extraction Algorithms} \\ \hline
+1            & TF-IDF  \\ \hline
+2            & BoW  \\ \hline
+3            & GloVe \\ \hline
+4            & LSA \\ \hline
+5            & LDA  \\ \hline
+6            &  Word2Vec  \\ \hline
+7            & Doc2Vec   \\ \hline
+8            &  BERT  \\ \hline
+9            & FastText \\ \hline
+10           & BM25  \\ \hline
+\end{tabular}
+}
+\caption{Feature Extraction Methods}
+\label{table:feature_extraction}
+\end{table}
 %
-\subsection{Similarity and Distance Measures:}
-\begin{enumerate}
-\item Cosine Similarity
-\item Euclidean Distance
-\item Jaccard Similarity
-\item Manhattan Distance
-\item Pearson Correlation
-\item Bray-Curtis Distance
-\item Canberra Distance
-\item Minkowski Distance
-\item Mahalanobis Distance
-\item Wasserstein Distance
-\end{enumerate}
+%
+%
+\vspace*{2\baselineskip}
+%\pagebreak{}
+\subsection{Descriptions of Similarity and Distance Measures:}
+Similarity and distance measures are critical for comparing items and identifying the most relevant recommendations. These measures quantify how closely two data points—such as the input items and the recommended items features—relate to each other in a multi-dimensional space. Different measures are suited for varying data types and use cases, impacting the effectiveness of the recommendation algorithm. Below are descriptions of the similarity and distance measures that will be used, each with its unique approach to comparing items or features:
+%
+%
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+{\large
+\begin{tabular}{|c|p{0.25\textwidth}|p{0.60\textwidth}|}
+\hline
+\textbf{\#} & \textbf{Measure} & \textbf{Description} \\ \hline
+1 & Cosine Similarity & Measures the cosine of the angle between two vectors in a multi-dimensional space. Ranges from -1 to 1 (-1 means completely opposite, 1 means completely similar). \\ \hline
+2 & Euclidean Distance & Calculated as the square root of the sum of squared differences between corresponding dimensions. It shows the straight-line distance between two points. \\ \hline
+3 & Jaccard Similarity & Measures the similarity between two sets by dividing the size of their intersection by the size of their union. \\ \hline
+4 & Manhattan Distance & Calculates the sum of the absolute differences between the coordinates of two points. \\ \hline
+5 & Pearson Correlation & Measures the linear correlation between two variables. Ranges from -1 to 1 (-1 means negative correlation, 1 means positive correlation, 0 means no linear relationship). \\ \hline
+6 & Bray-Curtis Distance & Measures the dissimilarity between two vectors as the sum of absolute differences divided by the sum of all values. \\ \hline
+7 & Canberra Distance & Calculated as the sum of absolute differences divided by the sum of the absolute values of the components. It is a weighted version of Manhattan Distance. \\ \hline
+8 & Minkowski Distance & Generalizes the Euclidean and Manhattan distances. It is controlled by a parameter p. \\ \hline
+9 & Mahalanobis Distance & Measures the distance between a point and a distribution, considering correlations between variables. \\ \hline
+10 & Wasserstein Distance & Measures the cost of transforming one probability distribution into another. \\ \hline
+\end{tabular}
+}
+\caption{Similarity and Distance Measures}
+\label{tab:similarity_measures}
+\end{table}
+%
+%
+%
+% \textbf{Combinations of Algorithms with Measures:}\\ %%%%%%%%%%%%%
 %
 %
 %
 \subsection{Evaluation}
-When \textbf{Evaluating} a RS there are two main types of evaluation, which are:
+The goal is to compare the previously mentioned algorithms and for comparison there are different Metrics to prove which algorithms perform better in which scenarios. When \textbf{Evaluating} a RS there are two main types of evaluation, which are:
 \begin{itemize}
 \item System-Centric Evaluation
 	\begin{itemize}
@@ -652,20 +727,30 @@ When \textbf{Evaluating} a RS there are two main types of evaluation, which are:
 	\begin{itemize}
 	\item Users' Perspective - how users perceive its quality or the user experience when interacting with the RS
 	\end{itemize}
-
 \end{itemize}
 %
 %
+I will focus on System-Centric Evaluation to test the performance of the algorithms and show results based on the metrics listed below.\\
+%
+%
 \subsubsection{Used Metrics for evaluation:}
+It is crucial to define how Relevant an item is based on the input item and it will be calculated as how similar their features are. Higher similarity will show higher relevance between the compared items in the list of recommended items. The metrics below describe how to compare the algorithms and how they use relevancy between items:
 \begin{itemize}
-\item Relevance - Feature Similarity - define treshold
+% \item Relevance - Feature Similarity - define treshold
 
-\item Usage Prediction - IMPLICIT FEEDBACK (clicks, downloads...)
-\item Coverage
-\item Ranking Measure
-\item Diversity
-\item Novelty - maybe (Serendipity is almost the same)
-\item Confidence\\\\
+\item Usage Prediction - capture the rate of correct recommendations - in a setting where each recommendation can be classified as relevant or non-relevant. Evaluates how well the algorithm predicts whether a user will interact with or use the recommended items, which is based on implicit feedback from the user (clicks, downloads...). Different Metrics can be used to calculate the Usage Prediction, such as Recall, Precision or F-score.
+
+\item Coverage - evaluates how effectively a recommendation algorithm utilizes the dataset, the proportion of items in the dataset that are recommended by the algorithm. High Item-space coverage indicates that the algorithm is exploring a wide range of items in the dataset and not favoring only a small subset. It is calculated as the percentage of: Number of recommended items / Number of total items in the dataset.
+
+\item Ranking Measure - evaluates the quality of the ordered list of recommendations by assessing how well the algorithm prioritizes the most relevant item. Relevant recommendations that are ranked higher are scored higher. After the ranking lists are generated by the algorithms, the Ranking Metrics are calculated from their outputs (Precision@K, NDCG@K, MRR).
+
+\item Diversity - refers to the dissimilarity of the items recommended, where low similarity values mean high diversity. Ensures that the recommendations are not overly similar to each other and show a broader range of topics or genres. It is important to set a threshold for similarity between recommended items and the input item to make sure the recommendations are still sufficiently relevant. Firstly we need to define the attributes to assess diversity (topics, genres, keywords), then after the algorithms created the feature vectors the Similarity Measures will show how dissimilar the books in the recommendation list are from one another. Then the overall diversity score is calculated from the recommendation list, also normalized.
+
+\item Confidence - shows the system's trust in its recommendations or predictions. It will be calculated based on Similarity between the Input item and the recommended items. After the algorithms created the feature vectors and the similarities are calculated from those, the confidence will be computed as the average similarity score across all recommended items, also normalized to a standard range [0, 1].\\
+A high confidence score indicates that the recommended items are very similar to the input item, suggesting the system is confident in its recommendations.
+
+\item Novelty - refers to the fraction of recommended items indeed new to the user. ???
+
 \end{itemize}
 %
 %
@@ -704,11 +789,17 @@ Online & Method: real-world user observation, online field experiment \\
 }
 %
 %
-\textbf{Offline evaluations} are the most popular experiment type. They aim to compare different recommendation algorithms and settings; they do not require any user interaction and may be considered system-centric.  \cite{Zangerle2023}\\\\
+\textbf{Offline evaluations} are the most popular experiment type. They aim to compare different recommendation algorithms and settings and they do not require any user interaction and may be considered system-centric.  \cite{Zangerle2023}\\\\
 %
 %
+\subsection{Dataset - Input of Books}
+The dataset for testing and evaluating the algorithms will consist of ... books as input.\\
+Format of the books for input to feed the algorithms: ...\\\\
+Tokenization, stopword removal, and optional stemming/lemmatization\\\\
 %
 %
+\newpage{}
+\textbf{Evaluation of Recommender Systems - Objectives and Design Space} \cite{Zangerle2023}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{img/evaluation_figure.png}
@@ -716,105 +807,6 @@ Online & Method: real-world user observation, online field experiment \\
     \label{fig:evaluation}
 \end{figure}
 %
-%
-%
-\textbf{Evaluation Objectives} ~\ref{fig:evaluation}.
-%
-\begin{itemize}
-\item Overall Goal - importance to define the evaluation goal as precisely as possible
-\item Stakeholders - varying goals and potentially conflicting interests\\
-Currently, academic RS research tends to take the perspective of the end consumer
-\item Properties - improving specific properties where they fall short \\
-The challenge is to identify the properties that are indeed relevant for a recommender’s performance and show that it affects the users’ experience, or the interests of other stakeholders. 
-\end{itemize}
-%
-%
-%
-\textbf{Evaluation Design Space:\\ Evaluation Principles} ~\ref{fig:evaluation}.
-%
-\begin{itemize}
-\item Hypothesis - precisely define the evaluation’s goal - the more precise the hypothesis, the clearer
-the evaluation setup as the hypothesis (in line with the evaluation objectives) shapes the evaluation design
-“Our recommendation algorithm based on visual features leads to a higher recommendation accuracy in comparison with conventional genre-based recommender systems” 
-
-\item Research Question -  when little is known about the phenomenon. The problem cannot be clearly defined at this state of research and the evaluation might, be of exploratory nature - to get a better understanding of a problem or explore patterns
-
-\item Control Variables
-\item Generalization Power
-\item Reliability
-	\begin{itemize}
-	\item Reproducibility (different team, different experimental setup)
-	\item Repeatability (same team, same experimental setup)
-	\item Replicability (different team, same experimental setup)
-	\end{itemize}
-\end{itemize}
-%
-%
-%
-\textbf{Evaluation Aspects} ~\ref{fig:evaluation}.
-%
-\begin{itemize}
-\item Types of Data
-	\begin{itemize}
-	\item Implicit and Explicit Rating Data
-	\item User, Item Information
-	\item Qualitative and Quantitative Data
-	\item Natural and Synthetic Data
-	\end{itemize}
-\item Data Collection
-	\begin{itemize}
-	\item User Involvement
-	\item User Feedback Elicitation
-	\item Existing Datasets
-	\end{itemize}
-\item Data Quality and Biases
-\item Evaluation Metrics
-\item Evaluation System
-\end{itemize}
-%
-%
-%
-%
-%
-%\begin{table}[h!]
-%\centering
-%\caption{FEVR: Overview of Example Evaluation}
-%\begin{tabular}{lp{10cm}}
-%\hline
-%\textbf{FEVR Component} & \textbf{Brief Description} \\ \hline
-%\multicolumn{2}{|l|}{\textbf{Evaluation Objectives}} \\ \hline
-%Overall Goal & To evaluate whether users are able to find likable music in the recommendations computed by the novel RecAlg algorithm \\ \hline
-%Stakeholders & Users of the system (algorithm) \newline Artists may also benefit from an increased item diversity as a more diverse set of artists may be represented \\ \hline
-%Properties & Item diversity in the recommendations; catalog coverage \\ \hline
-%\multicolumn{2}{|l|}{\textbf{Evaluation Principles}} \\ \hline
-%Hypothesis/Research Question & \( H_1 \): RecAlg provides users (on average) with more diverse recommendations with respect to the intra-list diversity while maintaining prediction accuracy compared to the baseline algorithm. \\ \hline
-%Control Variables & Follow accountability framework by Bellogín and Said \cite{24} (for randomization in dataset splitting to prevent selection bias) \\ \hline
-%Generalization Power & Limited due to lack of user involvement and dataset biases \\ \hline
-%Reliability & Follow accountability framework by Bellogín and Said \cite{24} \\ \hline
-%\multicolumn{2}{|l|}{\textbf{Experiment Type}} \\ \hline
-%Experiment Type & Offline Evaluation with A/B-testing \\ \hline
-%\multicolumn{2}{|l|}{\textbf{Evaluation Aspects}} \\ \hline
-%Types of Data & Implicit ratings (listening events), side information for music tracks \\ \hline
-%Data Collection & LFM-2b dataset \cite{194} \\ \hline
-%Data Quality and Biases & Platform bias, popularity bias, skewed gender distribution, imbalanced country distribution \\ \hline
-%Evaluation Metrics & Prediction accuracy with RMSE; intra-list similarity in terms of different unique artists \\ \hline
-%Evaluation System & Existing evaluation framework Elliot \cite{14} \\ \hline
-%\end{tabular}
-%\end{table}
-%
-%
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -830,19 +822,14 @@ the evaluation setup as the hypothesis (in line with the evaluation objectives) 
 
 \clearpage{}
 \section{Implementation}
-5 Pages\\
+% 5 Pages\\
 Jupyter Notebook\\\\
 
 \subsection{Dataset}
+Books\\
 
 \subsection{Experiments}
-\cite{Gunawardana2022547}
-%
-\begin{itemize}
-\item Offline Experiments - performed by using a pre-collected data set of users choosing or rating items
-\item User Studies - real user interaction with the system is collected, questions are asked (how relevant were the recommendations …)
-\item Online Evaluation - the system is used by real users that perform real tasks. It is most trustworthy to compare a few systems online, obtaining a ranking of alternatives, rather than absolute numbers that are more difficult to interpret.
-\end{itemize}
+Offline experiments\\
 
 \subsection{Testing}
 \cite{Gunawardana2022547}
@@ -856,12 +843,17 @@ Jupyter Notebook\\\\
 \end{itemize}
 %
 
+\subsection{Results and Comparison of Algorithms}
+Graphs\\
+Tables of results\\
+Description\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage{}
 \section{Conclusion}
-3-4 Pages\\\\
-
+% 3-4 Pages\\
+After implementing and testing the approaches of recommendation for books, I have found out that ...\\
 
 
 \clearpage
